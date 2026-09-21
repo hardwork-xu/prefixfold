@@ -363,13 +363,14 @@ def plot(summary: dict[str, Any], output: Path) -> None:
     ax.grid(axis="y", alpha=0.22)
     ax.set_axisbelow(True)
     ax.legend(ncols=4, frameon=False)
-    fig.savefig(
-        output,
-        metadata={
-            "Date": None,
-            "Description": "CPU attention latency / CPU 注意力延迟；完整数值见双语表格",
-        },
-    )
+    with matplotlib.rc_context({"svg.hashsalt": "prefixfold-0.1.0"}):
+        fig.savefig(
+            output,
+            metadata={
+                "Date": None,
+                "Description": "CPU attention latency / CPU 注意力延迟；完整数值见双语表格",
+            },
+        )
     plt.close(fig)
     if output.suffix == ".svg":
         # Whitespace-only normalization preserves the vector graphic and clean Git diffs.

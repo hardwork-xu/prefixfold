@@ -37,6 +37,8 @@ A final NumPy allocation audit found that int64 token indices, a boolean mask an
 | `2cd7db5` | Initial complete measurements and related-work evidence |
 | `70e7ed5` | Resource-estimate regression fix, strict analysis, document/privacy validators, and retained pre-fix evidence |
 
+The public-source checkpoint `1f66376` passed remote Python 3.11/3.12/3.13 CI and the Linux Docker build/demo job. `fe31764` added the verified public URLs and external receipt. SVG identifiers were subsequently made deterministic and repeated rendering was checked by SHA-256; this changes no measurements.
+
 ## Results and verification
 
 The initial experiment retained all 840 measured calls across seven cases and four variants, with 90.91% K/V array reduction and 2.99× median compute speedup. After the resource-estimate fix, the complete main and tile suites were rerun on revision `70e7ed5`: the final primary result is 3.50× (7.1603 / 2.0437 ms), with the same 90.91% K/V reduction. Both sessions remain available. The configured tiles and numerical kernels are unchanged, so the latency difference must not be attributed to the resource-estimate fix. No-prefix, single-request and short-prefix regressions remain visible. Post-primary tile sensitivity uses separately recorded, matching fixtures; it does not change the original default or target.

@@ -1,6 +1,6 @@
 Using Python 3.12.2 environment at: work/clean-install
-Resolved 2 packages in 17ms
-Prepared 1 package in 3ms
-Installed 2 packages in 20ms
+Resolved 2 packages in 6.01s
+Prepared 1 package in 6ms
+Installed 2 packages in 23ms
  + numpy==2.2.6
  + prefixfold==0.1.0 (from file://<repo>/dist/prefixfold-0.1.0-py3-none-any.whl)

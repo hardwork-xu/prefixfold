@@ -29,4 +29,4 @@ tests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_
     ParserElement.enablePackrat()
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-168 passed, 13 deselected, 14 warnings in 0.58s
+168 passed, 13 deselected, 14 warnings in 0.47s

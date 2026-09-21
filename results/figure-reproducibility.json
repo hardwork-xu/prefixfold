@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "method": "Regenerate main SVG twice from identical raw measurements; compare SHA-256 / 同一原始数据两次绘图并对比 SHA-256",
+  "sha256": "efc0e916e5cb47e5ee6c759e0970b8053cee077dedebae4d365f3e6064f5d2da"
+}

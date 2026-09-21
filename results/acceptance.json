@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "started_at": "2026-09-21T12:35:08.531887+00:00",
+  "started_at": "2026-09-21T12:38:08.785003+00:00",
   "source": {
-    "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+    "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
     "file_sha256": {
       "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
       "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -23,14 +23,14 @@
         "--check"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:08.532178+00:00",
-      "finished_at": "2026-09-21T12:35:08.630236+00:00",
+      "started_at": "2026-09-21T12:38:08.785294+00:00",
+      "finished_at": "2026-09-21T12:38:08.906806+00:00",
       "status": "passed",
       "exit_code": 0,
-      "summary": "Resolved 66 packages in 23ms\n",
+      "summary": "Resolved 66 packages in 63ms\n",
       "evidence": "results/validation/lock.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -51,14 +51,14 @@
         "from prefixfold import SharedPrefix, DecodeBatch, AttentionPlan, attend; print('API import OK / API 导入通过')"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:08.630884+00:00",
-      "finished_at": "2026-09-21T12:35:08.742153+00:00",
+      "started_at": "2026-09-21T12:38:08.907196+00:00",
+      "finished_at": "2026-09-21T12:38:08.984673+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "API import OK / API 导入通过\n",
       "evidence": "results/validation/api.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -80,14 +80,14 @@
         "demo"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:08.742440+00:00",
-      "finished_at": "2026-09-21T12:35:08.858871+00:00",
+      "started_at": "2026-09-21T12:38:08.984952+00:00",
+      "finished_at": "2026-09-21T12:38:09.099404+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "{\"status\": \"ok\", \"workload\": \"synthetic_fp32_attention_operator\", \"shape\": [4, 2, 32], \"max_abs_error\": 7.84969375611233e-08, \"kv_payload_bytes\": 150048, \"suffix_lengths\": [8, 4, 1, 6], \"message\": \"Grouped decode and append verified / 分组解码与追加已验证\"}\n",
       "evidence": "results/validation/demo.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -107,14 +107,14 @@
         "examples/decode.py"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:08.859363+00:00",
-      "finished_at": "2026-09-21T12:35:08.947351+00:00",
+      "started_at": "2026-09-21T12:38:09.099730+00:00",
+      "finished_at": "2026-09-21T12:38:09.190405+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "step / 步骤 0: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 1: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 2: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 3: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 4: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 5: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 6: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 7: (4, 2, 32); bytes / 字节 540704\n",
       "evidence": "results/validation/example.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -134,14 +134,14 @@
         "scripts/check_examples.py"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:08.947689+00:00",
-      "finished_at": "2026-09-21T12:35:09.429097+00:00",
+      "started_at": "2026-09-21T12:38:09.190734+00:00",
+      "finished_at": "2026-09-21T12:38:09.686189+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "(4, 2, 32)\n(4, 2, 32)\n(2, 2, 8) 2960\n(2, 2, 8) 2960\nDocumented examples passed / 文档示例通过: 4\n",
       "evidence": "results/validation/documented_examples.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -165,14 +165,14 @@
         "not integration"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:09.429552+00:00",
-      "finished_at": "2026-09-21T12:35:10.372182+00:00",
+      "started_at": "2026-09-21T12:38:09.686477+00:00",
+      "finished_at": "2026-09-21T12:38:10.491432+00:00",
       "status": "passed",
       "exit_code": 0,
-      "summary": "n_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\n  <repo>/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n    parse = parser.parseString(pattern)\n\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\n  <repo>/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n    parser.resetCache()\n\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\n  <repo>/.venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n    ParserElement.enablePackrat()\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n168 passed, 13 deselected, 14 warnings in 0.58s\n",
+      "summary": "n_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\n  <repo>/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n    parse = parser.parseString(pattern)\n\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\n  <repo>/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n    parser.resetCache()\n\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\n  <repo>/.venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n    ParserElement.enablePackrat()\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n168 passed, 13 deselected, 14 warnings in 0.47s\n",
       "evidence": "results/validation/unit_tests.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -196,14 +196,14 @@
         "integration"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:10.372544+00:00",
-      "finished_at": "2026-09-21T12:35:14.734061+00:00",
+      "started_at": "2026-09-21T12:38:10.491834+00:00",
+      "finished_at": "2026-09-21T12:38:15.295137+00:00",
       "status": "passed",
       "exit_code": 0,
-      "summary": ".............                                                            [100%]\n13 passed, 168 deselected in 4.13s\n",
+      "summary": ".............                                                            [100%]\n13 passed, 168 deselected in 4.58s\n",
       "evidence": "results/validation/integration_tests.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -226,14 +226,14 @@
         "."
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:14.734455+00:00",
-      "finished_at": "2026-09-21T12:35:14.803421+00:00",
+      "started_at": "2026-09-21T12:38:15.295656+00:00",
+      "finished_at": "2026-09-21T12:38:15.338034+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "All checks passed!\n",
       "evidence": "results/validation/lint.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -257,14 +257,14 @@
         "."
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:14.803866+00:00",
-      "finished_at": "2026-09-21T12:35:14.843451+00:00",
+      "started_at": "2026-09-21T12:38:15.338514+00:00",
+      "finished_at": "2026-09-21T12:38:15.376676+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "20 files already formatted\n",
       "evidence": "results/validation/format.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -286,14 +286,14 @@
         "src/prefixfold"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:14.843859+00:00",
-      "finished_at": "2026-09-21T12:35:15.267900+00:00",
+      "started_at": "2026-09-21T12:38:15.377230+00:00",
+      "finished_at": "2026-09-21T12:38:15.797893+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "Success: no issues found in 5 source files\n",
       "evidence": "results/validation/types.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -318,14 +318,14 @@
         "--update-readme"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:15.268626+00:00",
-      "finished_at": "2026-09-21T12:35:15.785953+00:00",
+      "started_at": "2026-09-21T12:38:15.798394+00:00",
+      "finished_at": "2026-09-21T12:38:16.298538+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "Analysis complete / 结果分析完成\n",
       "evidence": "results/validation/analysis.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -346,14 +346,14 @@
         "build"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:15.787122+00:00",
-      "finished_at": "2026-09-21T12:35:31.021705+00:00",
+      "started_at": "2026-09-21T12:38:16.299182+00:00",
+      "finished_at": "2026-09-21T12:38:31.367037+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "* Creating isolated environment: venv+pip...\n* Installing packages in isolated environment:\n  - hatchling==1.27.0\n* Getting build dependencies for sdist...\n* Building sdist...\n* Building wheel from sdist\n* Creating isolated environment: venv+pip...\n* Installing packages in isolated environment:\n  - hatchling==1.27.0\n* Getting build dependencies for wheel...\n* Building wheel...\nSuccessfully built prefixfold-0.1.0.tar.gz and prefixfold-0.1.0-py3-none-any.whl\n",
       "evidence": "results/validation/build.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -377,14 +377,14 @@
         "<repo>/dist/prefixfold-0.1.0.tar.gz"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:31.022840+00:00",
-      "finished_at": "2026-09-21T12:35:31.285032+00:00",
+      "started_at": "2026-09-21T12:38:31.368098+00:00",
+      "finished_at": "2026-09-21T12:38:31.680989+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "Checking \n<home>/Documents/Codex/2026-09-21/one-shot-end-to-end-delivery-3/output\ns/prefixfold/dist/prefixfold-0.1.0-py3-none-any.whl: PASSED\nChecking \n<home>/Documents/Codex/2026-09-21/one-shot-end-to-end-delivery-3/output\ns/prefixfold/dist/prefixfold-0.1.0.tar.gz: PASSED\n",
       "evidence": "results/validation/package_metadata.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -406,14 +406,14 @@
         "<repo>/work/clean-install"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:31.462989+00:00",
-      "finished_at": "2026-09-21T12:35:33.373849+00:00",
+      "started_at": "2026-09-21T12:38:31.906387+00:00",
+      "finished_at": "2026-09-21T12:38:34.262578+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "",
       "evidence": "results/validation/clean_environment.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -437,14 +437,14 @@
         "<repo>/dist/prefixfold-0.1.0-py3-none-any.whl"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:33.374897+00:00",
-      "finished_at": "2026-09-21T12:35:33.483449+00:00",
+      "started_at": "2026-09-21T12:38:34.264316+00:00",
+      "finished_at": "2026-09-21T12:38:40.398389+00:00",
       "status": "passed",
       "exit_code": 0,
-      "summary": "Using Python 3.12.2 environment at: work/clean-install\nResolved 2 packages in 17ms\nPrepared 1 package in 3ms\nInstalled 2 packages in 20ms\n + numpy==2.2.6\n + prefixfold==0.1.0 (from file://<repo>/dist/prefixfold-0.1.0-py3-none-any.whl)\n",
+      "summary": "Using Python 3.12.2 environment at: work/clean-install\nResolved 2 packages in 6.01s\nPrepared 1 package in 6ms\nInstalled 2 packages in 23ms\n + numpy==2.2.6\n + prefixfold==0.1.0 (from file://<repo>/dist/prefixfold-0.1.0-py3-none-any.whl)\n",
       "evidence": "results/validation/clean_install.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -467,14 +467,14 @@
         "demo"
       ],
       "cwd": "work/clean-install",
-      "started_at": "2026-09-21T12:35:33.484049+00:00",
-      "finished_at": "2026-09-21T12:35:38.268710+00:00",
+      "started_at": "2026-09-21T12:38:40.399170+00:00",
+      "finished_at": "2026-09-21T12:38:45.195769+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "{\"status\": \"ok\", \"workload\": \"synthetic_fp32_attention_operator\", \"shape\": [4, 2, 32], \"max_abs_error\": 7.84969375611233e-08, \"kv_payload_bytes\": 150048, \"suffix_lengths\": [8, 4, 1, 6], \"message\": \"Grouped decode and append verified / 分组解码与追加已验证\"}\n",
       "evidence": "results/validation/installed_wheel_demo.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -494,14 +494,14 @@
         "scripts/check_docs.py"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:38.269365+00:00",
-      "finished_at": "2026-09-21T12:35:38.608830+00:00",
+      "started_at": "2026-09-21T12:38:45.197274+00:00",
+      "finished_at": "2026-09-21T12:38:45.547721+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "{\n  \"status\": \"passed\",\n  \"message\": \"Documentation structural check / 文档结构检查\",\n  \"markdown_files_checked\": 45,\n  \"paired_documents\": 8,\n  \"findings\": [],\n  \"scope\": \"Local targets and bilingual structure; translation meaning and remote URLs need separate review / 本地目标与双语结构；翻译语义及远端链接需另行审查\"\n}\n",
       "evidence": "results/validation/docs.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -526,14 +526,14 @@
         "--validate"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:38.609399+00:00",
-      "finished_at": "2026-09-21T12:35:38.990252+00:00",
+      "started_at": "2026-09-21T12:38:45.548437+00:00",
+      "finished_at": "2026-09-21T12:38:52.360895+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "Citation metadata are valid according to schema version 1.2.0.\n",
       "evidence": "results/validation/citation.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -553,14 +553,14 @@
         "scripts/audit.py"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:38.990901+00:00",
-      "finished_at": "2026-09-21T12:35:39.276774+00:00",
+      "started_at": "2026-09-21T12:38:52.361521+00:00",
+      "finished_at": "2026-09-21T12:38:52.693369+00:00",
       "status": "passed",
       "exit_code": 0,
-      "summary": "{\n  \"status\": \"passed\",\n  \"message\": \"Public-file privacy audit / 公开文件隐私审查\",\n  \"files_checked\": 156,\n  \"text_files_checked\": 156,\n  \"commits_checked\": 6,\n  \"findings\": [],\n  \"scope\": \"Heuristic content and commit-email scan; no sensitive matches printed / 启发式内容及提交邮箱扫描，不输出敏感匹配内容\",\n  \"git_history_status\": \"checked\"\n}\n",
+      "summary": "{\n  \"status\": \"passed\",\n  \"message\": \"Public-file privacy audit / 公开文件隐私审查\",\n  \"files_checked\": 158,\n  \"text_files_checked\": 158,\n  \"commits_checked\": 7,\n  \"findings\": [],\n  \"scope\": \"Heuristic content and commit-email scan; no sensitive matches printed / 启发式内容及提交邮箱扫描，不输出敏感匹配内容\",\n  \"git_history_status\": \"checked\"\n}\n",
       "evidence": "results/validation/privacy_and_delivery.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -582,14 +582,14 @@
         "HEAD"
       ],
       "cwd": ".",
-      "started_at": "2026-09-21T12:35:39.277426+00:00",
-      "finished_at": "2026-09-21T12:35:39.304583+00:00",
+      "started_at": "2026-09-21T12:38:52.694259+00:00",
+      "finished_at": "2026-09-21T12:38:52.737780+00:00",
       "status": "passed",
       "exit_code": 0,
       "summary": "",
       "evidence": "results/validation/git_diff.log",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -632,7 +632,7 @@
       "exit_code": null,
       "reason": "docker executable not installed / 未安装 Docker",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -653,7 +653,7 @@
       "exit_code": null,
       "reason": "docker executable not installed / 未安装 Docker",
       "source": {
-        "git_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+        "git_revision": "fe31764b1501ce2cdb8a431327e2e9a55dc387c7",
         "file_sha256": {
           "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
           "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
@@ -669,7 +669,7 @@
     }
   ],
   "note": "Local acceptance; remote CI recorded separately / 本地验收，远端 CI 单独记录",
-  "finished_at": "2026-09-21T12:35:39.306351+00:00",
+  "finished_at": "2026-09-21T12:38:52.740152+00:00",
   "counts": {
     "passed": 21,
     "failed": 0,
