@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "frozen_before_benchmark": true,
+  "classification": "Target, not Measured",
+  "primary_workload": {"batch": 16, "heads": 4, "prefix": 4096, "suffix": 128, "dim": 64, "dtype": "float32", "threads": 1},
+  "primary_engineering_target": {"metric": "owned_kv_payload_reduction_vs_dense", "minimum": 0.80},
+  "secondary_latency_target": {"metric": "median_torch_sdpa_ms / median_prefixfold_ms", "minimum": 1.25},
+  "correctness": {"reference": "float64 dense stable softmax", "atol": 0.00003, "rtol": 0.00003, "all_workloads_required": true},
+  "protocol": {"warmup": 5, "repetitions": 30, "order": "seeded randomized variant order", "seed": 20260921, "tile_tokens": 1024, "workspace_bytes": 8388608},
+  "acceptance": ["exact single-token CPU decode for shared prefix and ragged suffix", "transactional bounded append and idempotent cleanup", "offline unit and CLI integration tests", "practical torch SDPA baseline and ungrouped ablation", "raw measurements including unfavorable cases", "bilingual docs and verified build"],
+  "interpretation": "Failure of a performance target must be published, not hidden. Payload bytes are not process RSS. No LLM end-to-end claim."
+}

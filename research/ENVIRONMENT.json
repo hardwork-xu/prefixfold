@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-09-21",
+  "workspace_initial_state": "empty projectless workspace, no repository or existing project files",
+  "os": "macOS 26.6.2",
+  "architecture": "arm64",
+  "cpu": "Apple M1 Pro",
+  "logical_cpus": 10,
+  "physical_cpus": 10,
+  "memory_bytes": 17179869184,
+  "disk_available_gib_approx": 230,
+  "python": "3.12.2",
+  "compiler": "Apple Clang 21.0.0",
+  "make": "available",
+  "cmake": "not installed; not required",
+  "gpu": "Apple M1 Pro 14-core GPU, Metal 4 reported; GPU not used by project",
+  "nvidia_cuda": "not available on this host",
+  "docker": {"status": "not_run", "reason": "docker executable not installed", "probe": "docker info"},
+  "network": {"pypi": "HTTP 200 and uv wheel installation succeeded", "github": "authenticated account API succeeded", "huggingface": "config download probe failed with curl exit 35 connection reset; no model downloaded"},
+  "data": "Deterministic synthetic attention tensors. No pretrained model, private dataset or model-quality claim."
+}
