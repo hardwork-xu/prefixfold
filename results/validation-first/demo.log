@@ -1,0 +1,1 @@
+{"status": "ok", "workload": "synthetic_fp32_attention_operator", "shape": [4, 2, 32], "max_abs_error": 7.84969375611233e-08, "kv_payload_bytes": 150048, "suffix_lengths": [8, 4, 1, 6], "message": "Grouped decode and append verified / 分组解码与追加已验证"}

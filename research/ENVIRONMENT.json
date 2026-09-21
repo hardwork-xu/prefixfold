@@ -1,6 +1,6 @@
 {
   "observed_at": "2026-09-21",
-  "workspace_initial_state": "empty projectless workspace, no repository or existing project files",
+  "workspace_initial_state": "empty workspace, no repository or existing project files",
   "os": "macOS 26.6.2",
   "architecture": "arm64",
   "cpu": "Apple M1 Pro",
@@ -14,7 +14,22 @@
   "cmake": "not installed; not required",
   "gpu": "Apple M1 Pro 14-core GPU, Metal 4 reported; GPU not used by project",
   "nvidia_cuda": "not available on this host",
-  "docker": {"status": "not_run", "reason": "docker executable not installed", "probe": "docker info"},
-  "network": {"pypi": "HTTP 200 and uv wheel installation succeeded", "github": "authenticated account API succeeded", "huggingface": "config download probe failed with curl exit 35 connection reset; no model downloaded"},
-  "data": "Deterministic synthetic attention tensors. No pretrained model, private dataset or model-quality claim."
+  "docker": {
+    "status": "not_run",
+    "reason": "docker executable not installed",
+    "probe": "docker info"
+  },
+  "network": {
+    "pypi": "HTTP 200 and uv wheel installation succeeded",
+    "github": "authenticated account API succeeded",
+    "huggingface": "config download probe failed with curl exit 35 connection reset; no model downloaded"
+  },
+  "data": "Deterministic synthetic attention tensors. No pretrained model, private dataset or model-quality claim.",
+  "accelerator_runtime_probe": {
+    "torch": "2.8.0",
+    "mps_built": true,
+    "mps_available": true,
+    "cuda_available": false,
+    "project_backend": "CPU only"
+  }
 }

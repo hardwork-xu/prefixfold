@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, cite this release. / 如使用本软件，请引用此版本。"
+title: "PrefixFold: Exact Shared-Prefix Decode Attention on CPU"
+version: 0.1.0
+type: software
+authors:
+  - name: "Xu Yixian"
+    website: "https://github.com/hardwork-xu"
+license: MIT
+abstract: "A reproducible CPU implementation of established shared-prefix attention decomposition and grouping. / 可复现的 CPU 共享前缀注意力分解与分组实现。"

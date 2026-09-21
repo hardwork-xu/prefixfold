@@ -8,5 +8,5 @@
    计时前冻结目标；主目标是 KV 分配字节减少至少 80%，至少 1.25 倍加速为独立目标；未达标也保留结论。
 4. Use NumPy 2.2.6 / Python 3.11–3.13 and PyTorch 2.8.0 CPU baseline. NumPy supplies BLAS, vector arithmetic and storage; PrefixFold supplies partitioning, grouping, state merge and lifecycle. Linux CPU containers are configured but cannot be tested locally without Docker.
    使用固定版本 NumPy 和 CPU PyTorch 基线；底层矩阵乘法由 BLAS 提供，本项目实现分区、分组、状态合并与生命周期。宿主机无 Docker，不能声称本地容器已通过验证。
-5. The user's final public-project instruction authorizes publishing this project. Use the verified public account and repository-local GitHub noreply identity; keep local paths and private contact provenance outside the repository, in a protected Desktop folder. Do not modify global Git identity.
-   用户最后的公开项目要求授权发布本项目；使用已核验公开账户与仓库本地 noreply 身份。私人联系信息与本地路径记录放到受保护的桌面文件夹，不修改全局身份。
+5. I publish only project files under a verified public identity. Repository-local GitHub noreply email keeps personal contact details out of commits. Local paths and private provenance stay outside the repository; global Git identity is left unchanged.
+   我只公开项目文件并使用核实的公开身份。仓库本地 GitHub noreply 邮箱避免在提交中暴露私人联系方式；本地路径与私人溯源记录保留在仓库之外，不修改全局 Git 身份。

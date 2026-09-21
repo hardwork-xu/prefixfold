@@ -1,14 +1,23 @@
 {
   "schema_version": 1,
-  "run_id": "20260921T120736Z-ab5c63ad",
+  "run_id": "20260921T121950Z-e3e28d53",
+  "raw_status": "passed",
+  "analyzer_sha256": "5f566b97542f3e0ee16925ccc38a155fa8c84c8424887a87479edf17af0addb5",
+  "config_sha256": "665bb92990edaf784bf8a51f855b70a7a553d44e5c79e44bb77608ba9f0348b8",
+  "validated_variants": [
+    "prefixfold",
+    "ungrouped",
+    "torch_sdpa",
+    "numpy_dense"
+  ],
   "source": {
-    "git_revision": "99e2958d71a20396308e931fca53cbdcdff98773",
+    "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
     "tested_source_dirty": false,
-    "source_sha256": "ad2cbe25b6f5617ca2eb3906ffb52ba54fe8263b9c0cdca9eb054c66f1a66563",
+    "source_sha256": "c0003d3eaf2887a4b8a026e9139ea2cc783d76487fa219f9bdaeac15c9b7d500",
     "file_sha256": {
       "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
       "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
-      "src/prefixfold/attention.py": "dd78d7786c9dbe2431854ffca55ce7ab35237d06622c6a5625724319232051f1",
+      "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
       "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
       "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
       "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215"
@@ -37,16 +46,16 @@
       "variant": "numpy_dense",
       "status": "passed",
       "samples": 30,
-      "median_ms": 6.9059375,
-      "min_ms": 6.339958,
-      "max_ms": 11.368083,
-      "mean_ms": 7.2316167,
-      "stdev_ms": 1.1218462078843179,
-      "first_call_ms": 26.576042,
+      "median_ms": 6.657729,
+      "min_ms": 6.168959,
+      "max_ms": 7.090125,
+      "mean_ms": 6.6520917,
+      "stdev_ms": 0.21187304216622027,
+      "first_call_ms": 9.527042,
       "kv_payload_bytes": 138412032,
-      "peak_worker_rss_bytes": 412188672,
-      "query_vectors_per_second": 9267.387664600208,
-      "torch_sdpa_speedup": 1.0432839857007103,
+      "peak_worker_rss_bytes": 387940352,
+      "query_vectors_per_second": 9612.887517650539,
+      "torch_sdpa_speedup": 1.0780953234954442,
       "kv_reduction_fraction": 0.0,
       "correctness": {
         "passed": true,
@@ -58,8 +67,8 @@
         "reference": "dense_reference_float64"
       },
       "setup": {
-        "common_fixture_ms": 18.934292,
-        "variant_materialization_ms": 48.716417
+        "common_fixture_ms": 15.483459,
+        "variant_materialization_ms": 12.73825
       }
     },
     {
@@ -67,15 +76,15 @@
       "variant": "torch_sdpa",
       "status": "passed",
       "samples": 30,
-      "median_ms": 7.204854,
-      "min_ms": 6.758375,
-      "max_ms": 11.136791,
-      "mean_ms": 7.552148633333333,
-      "stdev_ms": 0.9860052979680876,
-      "first_call_ms": 30.464083,
+      "median_ms": 7.1776665,
+      "min_ms": 7.006125,
+      "max_ms": 7.445375,
+      "mean_ms": 7.182594466666667,
+      "stdev_ms": 0.0867002403873427,
+      "first_call_ms": 10.147709,
       "kv_payload_bytes": 138412032,
-      "peak_worker_rss_bytes": 390627328,
-      "query_vectors_per_second": 8882.900333580666,
+      "peak_worker_rss_bytes": 401391616,
+      "query_vectors_per_second": 8916.546902813052,
       "torch_sdpa_speedup": 1.0,
       "kv_reduction_fraction": 0.0,
       "correctness": {
@@ -88,8 +97,8 @@
         "reference": "dense_reference_float64"
       },
       "setup": {
-        "common_fixture_ms": 21.66275,
-        "variant_materialization_ms": 39.592542
+        "common_fixture_ms": 15.017208,
+        "variant_materialization_ms": 13.052417
       }
     },
     {
@@ -97,16 +106,16 @@
       "variant": "prefixfold",
       "status": "passed",
       "samples": 30,
-      "median_ms": 2.019646,
-      "min_ms": 1.620208,
-      "max_ms": 2.680709,
-      "mean_ms": 2.0468610666666667,
-      "stdev_ms": 0.2882141467443637,
-      "first_call_ms": 3.877875,
+      "median_ms": 2.347875,
+      "min_ms": 1.596667,
+      "max_ms": 2.87,
+      "mean_ms": 2.2454959333333333,
+      "stdev_ms": 0.358159630318751,
+      "first_call_ms": 2.300625,
       "kv_payload_bytes": 12582912,
-      "peak_worker_rss_bytes": 263274496,
-      "query_vectors_per_second": 31688.72168686988,
-      "torch_sdpa_speedup": 3.5673845812583003,
+      "peak_worker_rss_bytes": 249036800,
+      "query_vectors_per_second": 27258.69136985572,
+      "torch_sdpa_speedup": 3.0570905606133203,
       "kv_reduction_fraction": 0.9090909090909091,
       "correctness": {
         "passed": true,
@@ -118,8 +127,8 @@
         "reference": "dense_reference_float64"
       },
       "setup": {
-        "common_fixture_ms": 21.617583,
-        "variant_materialization_ms": 0.097959
+        "common_fixture_ms": 15.319584,
+        "variant_materialization_ms": 0.01725
       }
     },
     {
@@ -127,16 +136,16 @@
       "variant": "ungrouped",
       "status": "passed",
       "samples": 30,
-      "median_ms": 6.9871875,
-      "min_ms": 6.642083,
-      "max_ms": 8.653167,
-      "mean_ms": 7.1958291333333335,
-      "stdev_ms": 0.5484832733049942,
-      "first_call_ms": 8.41525,
+      "median_ms": 7.2504995,
+      "min_ms": 6.728333,
+      "max_ms": 7.82675,
+      "mean_ms": 7.2411346666666665,
+      "stdev_ms": 0.20323855896786244,
+      "first_call_ms": 7.754292,
       "kv_payload_bytes": 12582912,
-      "peak_worker_rss_bytes": 263405568,
-      "query_vectors_per_second": 9159.622523368665,
-      "torch_sdpa_speedup": 1.0311522339997317,
+      "peak_worker_rss_bytes": 248643584,
+      "query_vectors_per_second": 8826.978058546174,
+      "torch_sdpa_speedup": 0.9899547610478423,
       "kv_reduction_fraction": 0.9090909090909091,
       "correctness": {
         "passed": true,
@@ -148,8 +157,8 @@
         "reference": "dense_reference_float64"
       },
       "setup": {
-        "common_fixture_ms": 19.343084,
-        "variant_materialization_ms": 0.037459
+        "common_fixture_ms": 16.574334,
+        "variant_materialization_ms": 0.024542
       }
     }
   ],
@@ -161,7 +170,7 @@
     },
     "measured": {
       "kv_reduction_fraction": 0.9090909090909091,
-      "torch_sdpa_speedup": 3.5673845812583003
+      "torch_sdpa_speedup": 3.0570905606133203
     },
     "met": {
       "kv_reduction_fraction": true,

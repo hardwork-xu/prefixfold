@@ -1,0 +1,350 @@
+results/latency.svg:44: trailing whitespace.
++       <path id="m6ae3187f8e" d="M 0 0 
+results/latency.svg:859: trailing whitespace.
++      <path d="M 41.278365 219.135478 
+results/latency.svg:860: trailing whitespace.
++L 860.99976 219.135478 
+results/latency.svg:865: trailing whitespace.
++       <path id="m58de674fff" d="M 0 0 
+results/latency.svg:884: trailing whitespace.
++      <path d="M 41.278365 89.808167 
+results/latency.svg:885: trailing whitespace.
++L 860.99976 89.808167 
+results/latency.svg:905: trailing whitespace.
++       <path id="m7bb6825f68" d="M 0 0 
+results/latency.svg:1265: trailing whitespace.
++    <path d="M 78.538428 129546.445983 
+results/latency.svg:1266: trailing whitespace.
++L 99.483434 129546.445983 
+results/latency.svg:1267: trailing whitespace.
++L 99.483434 269.476327 
+results/latency.svg:1268: trailing whitespace.
++L 78.538428 269.476327 
+results/latency.svg:1273: trailing whitespace.
++    <path d="M 188.775302 129546.445983 
+results/latency.svg:1274: trailing whitespace.
++L 209.720308 129546.445983 
+results/latency.svg:1275: trailing whitespace.
++L 209.720308 226.191859 
+results/latency.svg:1276: trailing whitespace.
++L 188.775302 226.191859 
+results/latency.svg:1281: trailing whitespace.
++    <path d="M 299.012176 129546.445983 
+results/latency.svg:1282: trailing whitespace.
++L 319.957182 129546.445983 
+results/latency.svg:1283: trailing whitespace.
++L 319.957182 251.387043 
+results/latency.svg:1284: trailing whitespace.
++L 299.012176 251.387043 
+results/latency.svg:1289: trailing whitespace.
++    <path d="M 409.24905 129546.445983 
+results/latency.svg:1290: trailing whitespace.
++L 430.194056 129546.445983 
+results/latency.svg:1291: trailing whitespace.
++L 430.194056 215.082205 
+results/latency.svg:1292: trailing whitespace.
++L 409.24905 215.082205 
+results/latency.svg:1297: trailing whitespace.
++    <path d="M 519.485924 129546.445983 
+results/latency.svg:1298: trailing whitespace.
++L 540.43093 129546.445983 
+results/latency.svg:1299: trailing whitespace.
++L 540.43093 178.989843 
+results/latency.svg:1300: trailing whitespace.
++L 519.485924 178.989843 
+results/latency.svg:1305: trailing whitespace.
++    <path d="M 629.722798 129546.445983 
+results/latency.svg:1306: trailing whitespace.
++L 650.667804 129546.445983 
+results/latency.svg:1307: trailing whitespace.
++L 650.667804 130.09489 
+results/latency.svg:1308: trailing whitespace.
++L 629.722798 130.09489 
+results/latency.svg:1313: trailing whitespace.
++    <path d="M 739.959672 129546.445983 
+results/latency.svg:1314: trailing whitespace.
++L 760.904678 129546.445983 
+results/latency.svg:1315: trailing whitespace.
++L 760.904678 166.190542 
+results/latency.svg:1316: trailing whitespace.
++L 739.959672 166.190542 
+results/latency.svg:1321: trailing whitespace.
++    <path d="M 99.483434 129546.445983 
+results/latency.svg:1322: trailing whitespace.
++L 120.428441 129546.445983 
+results/latency.svg:1323: trailing whitespace.
++L 120.428441 267.957207 
+results/latency.svg:1324: trailing whitespace.
++L 99.483434 267.957207 
+results/latency.svg:1329: trailing whitespace.
++    <path d="M 209.720308 129546.445983 
+results/latency.svg:1330: trailing whitespace.
++L 230.665315 129546.445983 
+results/latency.svg:1331: trailing whitespace.
++L 230.665315 226.800116 
+results/latency.svg:1332: trailing whitespace.
++L 209.720308 226.800116 
+results/latency.svg:1337: trailing whitespace.
++    <path d="M 319.957182 129546.445983 
+results/latency.svg:1338: trailing whitespace.
++L 340.902189 129546.445983 
+results/latency.svg:1339: trailing whitespace.
++L 340.902189 203.573919 
+results/latency.svg:1340: trailing whitespace.
++L 319.957182 203.573919 
+results/latency.svg:1345: trailing whitespace.
++    <path d="M 430.194056 129546.445983 
+results/latency.svg:1346: trailing whitespace.
++L 451.139062 129546.445983 
+results/latency.svg:1347: trailing whitespace.
++L 451.139062 177.52226 
+results/latency.svg:1348: trailing whitespace.
++L 430.194056 177.52226 
+results/latency.svg:1353: trailing whitespace.
++    <path d="M 540.43093 129546.445983 
+results/latency.svg:1354: trailing whitespace.
++L 561.375936 129546.445983 
+results/latency.svg:1355: trailing whitespace.
++L 561.375936 108.151326 
+results/latency.svg:1356: trailing whitespace.
++L 540.43093 108.151326 
+results/latency.svg:1361: trailing whitespace.
++    <path d="M 650.667804 129546.445983 
+results/latency.svg:1362: trailing whitespace.
++L 671.61281 129546.445983 
+results/latency.svg:1363: trailing whitespace.
++L 671.61281 33.647682 
+results/latency.svg:1364: trailing whitespace.
++L 650.667804 33.647682 
+results/latency.svg:1369: trailing whitespace.
++    <path d="M 760.904678 129546.445983 
+results/latency.svg:1370: trailing whitespace.
++L 781.849684 129546.445983 
+results/latency.svg:1371: trailing whitespace.
++L 781.849684 108.538872 
+results/latency.svg:1372: trailing whitespace.
++L 760.904678 108.538872 
+results/latency.svg:1377: trailing whitespace.
++    <path d="M 120.428441 129546.445983 
+results/latency.svg:1378: trailing whitespace.
++L 141.373447 129546.445983 
+results/latency.svg:1379: trailing whitespace.
++L 141.373447 297.45417 
+results/latency.svg:1380: trailing whitespace.
++L 120.428441 297.45417 
+results/latency.svg:1385: trailing whitespace.
++    <path d="M 230.665315 129546.445983 
+results/latency.svg:1386: trailing whitespace.
++L 251.610321 129546.445983 
+results/latency.svg:1387: trailing whitespace.
++L 251.610321 254.192473 
+results/latency.svg:1388: trailing whitespace.
++L 230.665315 254.192473 
+results/latency.svg:1393: trailing whitespace.
++    <path d="M 340.902189 129546.445983 
+results/latency.svg:1394: trailing whitespace.
++L 361.847195 129546.445983 
+results/latency.svg:1395: trailing whitespace.
++L 361.847195 260.758479 
+results/latency.svg:1396: trailing whitespace.
++L 340.902189 260.758479 
+results/latency.svg:1401: trailing whitespace.
++    <path d="M 451.139062 129546.445983 
+results/latency.svg:1402: trailing whitespace.
++L 472.084069 129546.445983 
+results/latency.svg:1403: trailing whitespace.
++L 472.084069 183.25772 
+results/latency.svg:1404: trailing whitespace.
++L 451.139062 183.25772 
+results/latency.svg:1409: trailing whitespace.
++    <path d="M 561.375936 129546.445983 
+results/latency.svg:1410: trailing whitespace.
++L 582.320943 129546.445983 
+results/latency.svg:1411: trailing whitespace.
++L 582.320943 108.569425 
+results/latency.svg:1412: trailing whitespace.
++L 561.375936 108.569425 
+results/latency.svg:1417: trailing whitespace.
++    <path d="M 671.61281 129546.445983 
+results/latency.svg:1418: trailing whitespace.
++L 692.557817 129546.445983 
+results/latency.svg:1425: trailing whitespace.
++    <path d="M 781.849684 129546.445983 
+results/latency.svg:1426: trailing whitespace.
++L 802.794691 129546.445983 
+results/latency.svg:1427: trailing whitespace.
++L 802.794691 108.265958 
+results/latency.svg:1428: trailing whitespace.
++L 781.849684 108.265958 
+results/latency.svg:1433: trailing whitespace.
++    <path d="M 141.373447 129546.445983 
+results/latency.svg:1434: trailing whitespace.
++L 162.318453 129546.445983 
+results/latency.svg:1441: trailing whitespace.
++    <path d="M 251.610321 129546.445983 
+results/latency.svg:1442: trailing whitespace.
++L 272.555327 129546.445983 
+results/latency.svg:1443: trailing whitespace.
++L 272.555327 261.984523 
+results/latency.svg:1444: trailing whitespace.
++L 251.610321 261.984523 
+results/latency.svg:1449: trailing whitespace.
++    <path d="M 361.847195 129546.445983 
+results/latency.svg:1450: trailing whitespace.
++L 382.792201 129546.445983 
+results/latency.svg:1451: trailing whitespace.
++L 382.792201 265.867131 
+results/latency.svg:1452: trailing whitespace.
++L 361.847195 265.867131 
+results/latency.svg:1457: trailing whitespace.
++    <path d="M 472.084069 129546.445983 
+results/latency.svg:1458: trailing whitespace.
++L 493.029075 129546.445983 
+results/latency.svg:1459: trailing whitespace.
++L 493.029075 190.630036 
+results/latency.svg:1460: trailing whitespace.
++L 472.084069 190.630036 
+results/latency.svg:1465: trailing whitespace.
++    <path d="M 582.320943 129546.445983 
+results/latency.svg:1466: trailing whitespace.
++L 603.265949 129546.445983 
+results/latency.svg:1467: trailing whitespace.
++L 603.265949 112.466203 
+results/latency.svg:1468: trailing whitespace.
++L 582.320943 112.466203 
+results/latency.svg:1473: trailing whitespace.
++    <path d="M 692.557817 129546.445983 
+results/latency.svg:1474: trailing whitespace.
++L 713.502823 129546.445983 
+results/latency.svg:1475: trailing whitespace.
++L 713.502823 35.547609 
+results/latency.svg:1476: trailing whitespace.
++L 692.557817 35.547609 
+results/latency.svg:1481: trailing whitespace.
++    <path d="M 802.794691 129546.445983 
+results/latency.svg:1482: trailing whitespace.
++L 823.739697 129546.445983 
+results/latency.svg:1483: trailing whitespace.
++L 823.739697 111.696772 
+results/latency.svg:1484: trailing whitespace.
++L 802.794691 111.696772 
+results/tile1024-analysis/latency.svg:44: trailing whitespace.
++       <path id="mcd284a9348" d="M 0 0 
+results/tile1024-analysis/latency.svg:405: trailing whitespace.
++       <path id="m05f9005b82" d="M 0 0 
+results/tile1024-analysis/latency.svg:449: trailing whitespace.
++        <path id="DejaVuSans-d7" d="M 4488 3438 
+results/tile1024-analysis/latency.svg:450: trailing whitespace.
++L 3059 2003 
+results/tile1024-analysis/latency.svg:451: trailing whitespace.
++L 4488 575 
+results/tile1024-analysis/latency.svg:452: trailing whitespace.
++L 4116 197 
+results/tile1024-analysis/latency.svg:453: trailing whitespace.
++L 2681 1631 
+results/tile1024-analysis/latency.svg:454: trailing whitespace.
++L 1247 197 
+results/tile1024-analysis/latency.svg:455: trailing whitespace.
++L 878 575 
+results/tile1024-analysis/latency.svg:456: trailing whitespace.
++L 2303 2003 
+results/tile1024-analysis/latency.svg:457: trailing whitespace.
++L 878 3438 
+results/tile1024-analysis/latency.svg:458: trailing whitespace.
++L 1247 3816 
+results/tile1024-analysis/latency.svg:459: trailing whitespace.
++L 2681 2381 
+results/tile1024-analysis/latency.svg:460: trailing whitespace.
++L 4116 3816 
+results/tile1024-analysis/latency.svg:461: trailing whitespace.
++L 4488 3438 
+results/tile1024-analysis/latency.svg:868: trailing whitespace.
++    <path d="M 94.765701 565726.055074 
+results/tile1024-analysis/latency.svg:869: trailing whitespace.
++L 277.202382 565726.055074 
+results/tile1024-analysis/latency.svg:876: trailing whitespace.
++    <path d="M 277.202382 565726.055074 
+results/tile1024-analysis/latency.svg:877: trailing whitespace.
++L 459.639062 565726.055074 
+results/tile1024-analysis/latency.svg:878: trailing whitespace.
++L 459.639062 31.957279 
+results/tile1024-analysis/latency.svg:879: trailing whitespace.
++L 277.202382 31.957279 
+results/tile1024-analysis/latency.svg:884: trailing whitespace.
++    <path d="M 459.639062 565726.055074 
+results/tile1024-analysis/latency.svg:885: trailing whitespace.
++L 642.075743 565726.055074 
+results/tile1024-analysis/latency.svg:886: trailing whitespace.
++L 642.075743 34.435518 
+results/tile1024-analysis/latency.svg:887: trailing whitespace.
++L 459.639062 34.435518 
+results/tile1024-analysis/latency.svg:892: trailing whitespace.
++    <path d="M 642.075743 565726.055074 
+results/tile1024-analysis/latency.svg:893: trailing whitespace.
++L 824.512424 565726.055074 
+results/tile1024-analysis/latency.svg:894: trailing whitespace.
++L 824.512424 52.893602 
+results/tile1024-analysis/latency.svg:895: trailing whitespace.
++L 642.075743 52.893602 
+results/tile256-analysis/latency.svg:44: trailing whitespace.
++       <path id="mfe17d6844d" d="M 0 0 
+results/tile256-analysis/latency.svg:404: trailing whitespace.
++      <path d="M 58.278365 105.326865 
+results/tile256-analysis/latency.svg:405: trailing whitespace.
++L 860.99976 105.326865 
+results/tile256-analysis/latency.svg:410: trailing whitespace.
++       <path id="md7db0fea17" d="M 0 0 
+results/tile256-analysis/latency.svg:430: trailing whitespace.
++       <path id="mb4d881f864" d="M 0 0 
+results/tile256-analysis/latency.svg:907: trailing whitespace.
++    <path d="M 94.765701 360699.797024 
+results/tile256-analysis/latency.svg:908: trailing whitespace.
++L 277.202382 360699.797024 
+results/tile256-analysis/latency.svg:915: trailing whitespace.
++    <path d="M 277.202382 360699.797024 
+results/tile256-analysis/latency.svg:916: trailing whitespace.
++L 459.639062 360699.797024 
+results/tile256-analysis/latency.svg:923: trailing whitespace.
++    <path d="M 459.639062 360699.797024 
+results/tile256-analysis/latency.svg:924: trailing whitespace.
++L 642.075743 360699.797024 
+results/tile256-analysis/latency.svg:925: trailing whitespace.
++L 642.075743 155.928134 
+results/tile256-analysis/latency.svg:926: trailing whitespace.
++L 459.639062 155.928134 
+results/tile256-analysis/latency.svg:931: trailing whitespace.
++    <path d="M 642.075743 360699.797024 
+results/tile256-analysis/latency.svg:932: trailing whitespace.
++L 824.512424 360699.797024 
+results/tile256-analysis/latency.svg:933: trailing whitespace.
++L 824.512424 165.38753 
+results/tile256-analysis/latency.svg:934: trailing whitespace.
++L 642.075743 165.38753 
+results/tile4096-analysis/latency.svg:44: trailing whitespace.
++       <path id="madae915cc1" d="M 0 0 
+results/tile4096-analysis/latency.svg:405: trailing whitespace.
++       <path id="m3d71fdb870" d="M 0 0 
+results/tile4096-analysis/latency.svg:911: trailing whitespace.
++    <path d="M 94.765701 486397.393287 
+results/tile4096-analysis/latency.svg:912: trailing whitespace.
++L 277.202382 486397.393287 
+results/tile4096-analysis/latency.svg:919: trailing whitespace.
++    <path d="M 277.202382 486397.393287 
+results/tile4096-analysis/latency.svg:920: trailing whitespace.
++L 459.639062 486397.393287 
+results/tile4096-analysis/latency.svg:921: trailing whitespace.
++L 459.639062 139.438399 
+results/tile4096-analysis/latency.svg:922: trailing whitespace.
++L 277.202382 139.438399 
+results/tile4096-analysis/latency.svg:927: trailing whitespace.
++    <path d="M 459.639062 486397.393287 
+results/tile4096-analysis/latency.svg:928: trailing whitespace.
++L 642.075743 486397.393287 
+results/tile4096-analysis/latency.svg:935: trailing whitespace.
++    <path d="M 642.075743 486397.393287 
+results/tile4096-analysis/latency.svg:936: trailing whitespace.
++L 824.512424 486397.393287 
+results/tile4096-analysis/latency.svg:937: trailing whitespace.
++L 824.512424 49.176072 
+results/tile4096-analysis/latency.svg:938: trailing whitespace.
++L 642.075743 49.176072 

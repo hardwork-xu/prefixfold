@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "message": "Documentation structural check / 文档结构检查",
+  "markdown_files_checked": 45,
+  "paired_documents": 8,
+  "findings": [],
+  "scope": "Local targets and bilingual structure; translation meaning and remote URLs need separate review / 本地目标与双语结构；翻译语义及远端链接需另行审查"
+}

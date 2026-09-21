@@ -371,6 +371,12 @@ def plot(summary: dict[str, Any], output: Path) -> None:
         },
     )
     plt.close(fig)
+    if output.suffix == ".svg":
+        # Whitespace-only normalization preserves the vector graphic and clean Git diffs.
+        # 仅规范化空白，保留矢量图形并使 Git 差异检查通过。
+        output.write_text(
+            "\n".join(line.rstrip() for line in output.read_text().splitlines()) + "\n"
+        )
 
 
 def main() -> int:

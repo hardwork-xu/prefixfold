@@ -1,0 +1,678 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-09-21T12:28:11.432190+00:00",
+  "source": {
+    "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+    "file_sha256": {
+      "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+      "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+      "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+      "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+      "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+      "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+      "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+    }
+  },
+  "checks": [
+    {
+      "name": "lock",
+      "command": [
+        "<repo>/.venv/bin/uv",
+        "lock",
+        "--check"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:11.432513+00:00",
+      "finished_at": "2026-09-21T12:28:11.507811+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "Resolved 66 packages in 15ms\n",
+      "evidence": "results/validation/lock.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "api",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "-c",
+        "from prefixfold import SharedPrefix, DecodeBatch, AttentionPlan, attend; print('API import OK / API 导入通过')"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:11.508344+00:00",
+      "finished_at": "2026-09-21T12:28:11.586573+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "API import OK / API 导入通过\n",
+      "evidence": "results/validation/api.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "demo",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "-m",
+        "prefixfold",
+        "demo"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:11.586832+00:00",
+      "finished_at": "2026-09-21T12:28:11.698013+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "{\"status\": \"ok\", \"workload\": \"synthetic_fp32_attention_operator\", \"shape\": [4, 2, 32], \"max_abs_error\": 7.84969375611233e-08, \"kv_payload_bytes\": 150048, \"suffix_lengths\": [8, 4, 1, 6], \"message\": \"Grouped decode and append verified / 分组解码与追加已验证\"}\n",
+      "evidence": "results/validation/demo.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "example",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "examples/decode.py"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:11.698316+00:00",
+      "finished_at": "2026-09-21T12:28:11.789784+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "step / 步骤 0: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 1: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 2: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 3: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 4: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 5: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 6: (4, 2, 32); bytes / 字节 540704\nstep / 步骤 7: (4, 2, 32); bytes / 字节 540704\n",
+      "evidence": "results/validation/example.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "documented_examples",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "scripts/check_examples.py"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:11.790121+00:00",
+      "finished_at": "2026-09-21T12:28:12.262887+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "(4, 2, 32)\n(4, 2, 32)\n(2, 2, 8) 2960\n(2, 2, 8) 2960\nDocumented examples passed / 文档示例通过: 4\n",
+      "evidence": "results/validation/documented_examples.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "unit_tests",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-m",
+        "not integration"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:12.263223+00:00",
+      "finished_at": "2026-09-21T12:28:13.089052+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "n_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\n  <repo>/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n    parse = parser.parseString(pattern)\n\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\n  <repo>/.venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n    parser.resetCache()\n\ntests/test_analysis.py::test_all_failed_run_retains_failures_without_fabricated_latencies\n  <repo>/.venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n    ParserElement.enablePackrat()\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n168 passed, 13 deselected, 14 warnings in 0.49s\n",
+      "evidence": "results/validation/unit_tests.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "integration_tests",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-m",
+        "integration"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:13.089511+00:00",
+      "finished_at": "2026-09-21T12:28:17.582827+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": ".............                                                            [100%]\n13 passed, 168 deselected in 4.25s\n",
+      "evidence": "results/validation/integration_tests.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "lint",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:17.583287+00:00",
+      "finished_at": "2026-09-21T12:28:17.633364+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "All checks passed!\n",
+      "evidence": "results/validation/lint.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "format",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:17.633804+00:00",
+      "finished_at": "2026-09-21T12:28:17.672848+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "20 files already formatted\n",
+      "evidence": "results/validation/format.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "types",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "-m",
+        "mypy",
+        "src/prefixfold"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:17.673367+00:00",
+      "finished_at": "2026-09-21T12:28:18.104628+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "Success: no issues found in 5 source files\n",
+      "evidence": "results/validation/types.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "analysis",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "scripts/analyze.py",
+        "--input",
+        "results/benchmark.json",
+        "--output-dir",
+        "results",
+        "--update-readme"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:18.105174+00:00",
+      "finished_at": "2026-09-21T12:28:18.614588+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "Analysis complete / 结果分析完成\n",
+      "evidence": "results/validation/analysis.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "build",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "-m",
+        "build"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:18.615179+00:00",
+      "finished_at": "2026-09-21T12:28:34.080644+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "* Creating isolated environment: venv+pip...\n* Installing packages in isolated environment:\n  - hatchling==1.27.0\n* Getting build dependencies for sdist...\n* Building sdist...\n* Building wheel from sdist\n* Creating isolated environment: venv+pip...\n* Installing packages in isolated environment:\n  - hatchling==1.27.0\n* Getting build dependencies for wheel...\n* Building wheel...\nSuccessfully built prefixfold-0.1.0.tar.gz and prefixfold-0.1.0-py3-none-any.whl\n",
+      "evidence": "results/validation/build.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "package_metadata",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "-m",
+        "twine",
+        "check",
+        "<repo>/dist/prefixfold-0.1.0-py3-none-any.whl",
+        "<repo>/dist/prefixfold-0.1.0.tar.gz"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:34.081612+00:00",
+      "finished_at": "2026-09-21T12:28:34.357645+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "Checking \n<home>/Documents/Codex/2026-09-21/one-shot-end-to-end-delivery-3/output\ns/prefixfold/dist/prefixfold-0.1.0-py3-none-any.whl: PASSED\nChecking \n<home>/Documents/Codex/2026-09-21/one-shot-end-to-end-delivery-3/output\ns/prefixfold/dist/prefixfold-0.1.0.tar.gz: PASSED\n",
+      "evidence": "results/validation/package_metadata.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "clean_environment",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "-m",
+        "venv",
+        "<repo>/work/clean-install"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:34.535796+00:00",
+      "finished_at": "2026-09-21T12:28:36.493736+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "",
+      "evidence": "results/validation/clean_environment.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "clean_install",
+      "command": [
+        "<repo>/.venv/bin/uv",
+        "pip",
+        "install",
+        "--python",
+        "<repo>/work/clean-install/bin/python",
+        "<repo>/dist/prefixfold-0.1.0-py3-none-any.whl"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:36.494739+00:00",
+      "finished_at": "2026-09-21T12:28:36.624528+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "Using Python 3.12.2 environment at: work/clean-install\nResolved 2 packages in 17ms\nPrepared 1 package in 4ms\nInstalled 2 packages in 39ms\n + numpy==2.2.6\n + prefixfold==0.1.0 (from file://<repo>/dist/prefixfold-0.1.0-py3-none-any.whl)\n",
+      "evidence": "results/validation/clean_install.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "installed_wheel_demo",
+      "command": [
+        "<repo>/work/clean-install/bin/python",
+        "-I",
+        "-m",
+        "prefixfold",
+        "demo"
+      ],
+      "cwd": "work/clean-install",
+      "started_at": "2026-09-21T12:28:36.625064+00:00",
+      "finished_at": "2026-09-21T12:28:41.403437+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "{\"status\": \"ok\", \"workload\": \"synthetic_fp32_attention_operator\", \"shape\": [4, 2, 32], \"max_abs_error\": 7.84969375611233e-08, \"kv_payload_bytes\": 150048, \"suffix_lengths\": [8, 4, 1, 6], \"message\": \"Grouped decode and append verified / 分组解码与追加已验证\"}\n",
+      "evidence": "results/validation/installed_wheel_demo.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "docs",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "scripts/check_docs.py"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:41.404409+00:00",
+      "finished_at": "2026-09-21T12:28:41.749942+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "{\n  \"status\": \"passed\",\n  \"message\": \"Documentation structural check / 文档结构检查\",\n  \"markdown_files_checked\": 45,\n  \"paired_documents\": 8,\n  \"findings\": [],\n  \"scope\": \"Local targets and bilingual structure; translation meaning and remote URLs need separate review / 本地目标与双语结构；翻译语义及远端链接需另行审查\"\n}\n",
+      "evidence": "results/validation/docs.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "citation",
+      "command": [
+        "<repo>/.venv/bin/uv",
+        "tool",
+        "run",
+        "--from",
+        "cffconvert==2.0.0",
+        "cffconvert",
+        "--validate"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:41.751005+00:00",
+      "finished_at": "2026-09-21T12:28:42.133885+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "Citation metadata are valid according to schema version 1.2.0.\n",
+      "evidence": "results/validation/citation.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "privacy_and_delivery",
+      "command": [
+        "<repo>/.venv/bin/python",
+        "scripts/audit.py"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:42.134585+00:00",
+      "finished_at": "2026-09-21T12:28:42.433396+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "{\n  \"status\": \"passed\",\n  \"message\": \"Public-file privacy audit / 公开文件隐私审查\",\n  \"files_checked\": 155,\n  \"text_files_checked\": 155,\n  \"commits_checked\": 5,\n  \"findings\": [],\n  \"scope\": \"Heuristic content and commit-email scan; no sensitive matches printed / 启发式内容及提交邮箱扫描，不输出敏感匹配内容\",\n  \"git_history_status\": \"checked\"\n}\n",
+      "evidence": "results/validation/privacy_and_delivery.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "git_diff",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": ".",
+      "started_at": "2026-09-21T12:28:42.433991+00:00",
+      "finished_at": "2026-09-21T12:28:42.464312+00:00",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "",
+      "evidence": "results/validation/git_diff.log",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      }
+    },
+    {
+      "name": "benchmark",
+      "command": "python benchmark.py --config configs/benchmark.json --output results/benchmark.json --variants prefixfold ungrouped torch_sdpa numpy_dense --timeout 120",
+      "status": "passed",
+      "exit_code": 0,
+      "summary": "Existing executed run, source hashes checked / 核验此前实际实验的源码哈希",
+      "evidence": "results/benchmark.json",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "tested_source_dirty": false,
+        "source_sha256": "c0003d3eaf2887a4b8a026e9139ea2cc783d76487fa219f9bdaeac15c9b7d500",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215"
+        }
+      },
+      "run_id": "20260921T121914Z-56a3bc9a",
+      "record_kind": "previously_executed_run"
+    },
+    {
+      "name": "docker_build",
+      "command": "docker build -t prefixfold:acceptance .",
+      "status": "not_run",
+      "exit_code": null,
+      "reason": "docker executable not installed / 未安装 Docker",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      },
+      "evidence": "research/ENVIRONMENT.json"
+    },
+    {
+      "name": "docker_run",
+      "command": "docker run --rm prefixfold:acceptance",
+      "status": "not_run",
+      "exit_code": null,
+      "reason": "docker executable not installed / 未安装 Docker",
+      "source": {
+        "git_revision": "70e7ed50e51b4de74a9d35c358068aa689a939c5",
+        "file_sha256": {
+          "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+          "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "src/prefixfold/attention.py": "cc43ebe533210b5c5e0a0238f3f605ca8be4846064f86c1fd846a40252f52b2f",
+          "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+          "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+          "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215",
+          "pyproject.toml": "5db7407acf3758e7ec8056dc1e29e4931907f866af5cea50456e99b20d2514d6",
+          "uv.lock": "d0ebf3a66b8d0bddf894ca21f741a15d907e1814f19579f3751854f95b3fad58"
+        }
+      },
+      "evidence": "research/ENVIRONMENT.json"
+    }
+  ],
+  "note": "Local acceptance; remote CI recorded separately / 本地验收，远端 CI 单独记录",
+  "finished_at": "2026-09-21T12:28:42.466350+00:00",
+  "counts": {
+    "passed": 21,
+    "failed": 0,
+    "skipped": 0,
+    "not_run": 2
+  }
+}

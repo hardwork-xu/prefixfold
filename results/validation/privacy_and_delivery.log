@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "message": "Public-file privacy audit / 公开文件隐私审查",
+  "files_checked": 155,
+  "text_files_checked": 155,
+  "commits_checked": 5,
+  "findings": [],
+  "scope": "Heuristic content and commit-email scan; no sensitive matches printed / 启发式内容及提交邮箱扫描，不输出敏感匹配内容",
+  "git_history_status": "checked"
+}
