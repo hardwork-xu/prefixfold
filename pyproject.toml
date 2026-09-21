@@ -36,6 +36,7 @@ packages = ["src/prefixfold"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 addopts = "-ra"
 markers = ["integration: CLI and complete workflow tests / 命令行和完整流程测试"]
 

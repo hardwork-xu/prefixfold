@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "seed": 20260921,
+  "warmup": 1,
+  "repetitions": 2,
+  "primary_case": "smoke",
+  "targets": {"kv_reduction_fraction": 0.8, "torch_sdpa_speedup": 1.25},
+  "plan": {"tile_tokens": 32, "workspace_bytes": 1048576},
+  "cases": [{"name": "smoke", "batch": 4, "heads": 2, "prefix": 65, "suffix": 7, "dim": 16, "ragged": true}]
+}

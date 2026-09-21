@@ -1,0 +1,12 @@
+.git
+.venv*
+work
+dist
+results
+__pycache__
+.pytest_cache
+.mypy_cache
+.ruff_cache
+*.npz
+.env*
+.DS_Store

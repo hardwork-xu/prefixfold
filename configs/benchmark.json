@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "seed": 20260921,
+  "warmup": 5,
+  "repetitions": 30,
+  "primary_case": "shared_b16_p4096",
+  "targets": {"kv_reduction_fraction": 0.8, "torch_sdpa_speedup": 1.25},
+  "plan": {"tile_tokens": 1024, "workspace_bytes": 8388608},
+  "cases": [
+    {"name": "no_prefix", "batch": 16, "heads": 4, "prefix": 0, "suffix": 128, "dim": 64},
+    {"name": "single_request", "batch": 1, "heads": 4, "prefix": 4096, "suffix": 128, "dim": 64},
+    {"name": "short_prefix", "batch": 16, "heads": 4, "prefix": 128, "suffix": 128, "dim": 64},
+    {"name": "shared_b4_p4096", "batch": 4, "heads": 4, "prefix": 4096, "suffix": 128, "dim": 64},
+    {"name": "shared_b16_p4096", "batch": 16, "heads": 4, "prefix": 4096, "suffix": 128, "dim": 64},
+    {"name": "shared_b32_p8192", "batch": 32, "heads": 4, "prefix": 8192, "suffix": 128, "dim": 64},
+    {"name": "ragged_suffix", "batch": 16, "heads": 4, "prefix": 4096, "suffix": 256, "dim": 64, "ragged": true}
+  ]
+}
