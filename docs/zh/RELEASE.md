@@ -6,9 +6,9 @@
 
 ## 状态
 
-**已核验公开源码及远端 CI：**[首次成功工作流](https://github.com/hardwork-xu/prefixfold/actions/runs/35600203428)的 Python 3.11、3.12、3.13 三项任务及 Linux Docker 构建/演示任务全部通过。[机器可读记录](../../results/publication.json)保存实际被测 revision 和任务链接。本地 macOS 因无 Docker 仍未执行容器验证。版本化构建产物发布后可从仓库 Releases 页面获取；未执行包索引发布或公网服务部署。
+**已核验公开源码及远端 CI：**[首次成功工作流](https://github.com/hardwork-xu/shared-prefix-attention/actions/runs/35600203428)的 Python 3.11、3.12、3.13 三项任务及 Linux Docker 构建/演示任务全部通过。[机器可读记录](../../results/publication.json)保存实际被测 revision 和任务链接。本地 macOS 因无 Docker 仍未执行容器验证。版本化构建产物发布后可从仓库 Releases 页面获取；未执行包索引发布或公网服务部署。
 
-公开仓库：[hardwork-xu/prefixfold](https://github.com/hardwork-xu/prefixfold)。外部核验完成后写入发布记录。
+公开仓库：[hardwork-xu/shared-prefix-attention](https://github.com/hardwork-xu/shared-prefix-attention)。外部核验完成后写入发布记录。
 
 本地实现、测试和主基准已经运行。打包、干净安装和文档/隐私检查记录于 [acceptance.json](../../results/acceptance.json)。实测 Mac 未安装 Docker：**本地容器验证未执行**。仓库包含 Linux CPU 容器和普通 GitHub Actions 配置，已核验的外部运行记录见上文。
 

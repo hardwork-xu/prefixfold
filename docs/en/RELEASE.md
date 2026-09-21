@@ -6,9 +6,9 @@ I maintain PrefixFold 0.1.0 as a focused, reproducible CPU numerical library. Re
 
 ## Status
 
-**Verified public source and remote CI:** [initial successful workflow](https://github.com/hardwork-xu/prefixfold/actions/runs/35600203428) passed all three Python jobs (3.11, 3.12, 3.13) and the Linux Docker build/demo job. The [machine-readable receipt](../../results/publication.json) records the actual checked revision and job URLs. Local macOS Docker remains unexecuted because no Docker is installed. Versioned release artifacts are available from the repository Releases page after publication; package-index publication and public-service deployment are not performed.
+**Verified public source and remote CI:** [initial successful workflow](https://github.com/hardwork-xu/shared-prefix-attention/actions/runs/35600203428) passed all three Python jobs (3.11, 3.12, 3.13) and the Linux Docker build/demo job. The [machine-readable receipt](../../results/publication.json) records the actual checked revision and job URLs. Local macOS Docker remains unexecuted because no Docker is installed. Versioned release artifacts are available from the repository Releases page after publication; package-index publication and public-service deployment are not performed.
 
-Public repository: [hardwork-xu/prefixfold](https://github.com/hardwork-xu/prefixfold). External verification is recorded in the release receipt when completed.
+Public repository: [hardwork-xu/shared-prefix-attention](https://github.com/hardwork-xu/shared-prefix-attention). External verification is recorded in the release receipt when completed.
 
 The local implementation, tests and primary benchmark have run. Packaging, clean-install and document/privacy checks are recorded in [acceptance.json](../../results/acceptance.json). Docker is not installed on the measured Mac: **local container validation was not executed**. The repository contains Linux CPU container and ordinary GitHub Actions configurations; the verified external run is recorded above.
 

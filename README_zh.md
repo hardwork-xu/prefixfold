@@ -1,10 +1,12 @@
-# PrefixFold
+# 共享前缀注意力 · Shared-Prefix Attention
+
+仓库原名 `prefixfold`；包名及现有命令保持不变（`prefixfold`）。
 
 **CPU 上的共享前缀精确解码注意力。** 一个紧凑的数值计算库，在请求间共享长 KV 前缀、合并矩阵乘法，并稳定合并分块 softmax 状态。
 
-[GitHub](https://github.com/hardwork-xu/prefixfold) · [English](README.md) · [研究说明](docs/zh/RESEARCH.md) · [API](docs/zh/API.md) · [实验](docs/zh/EXPERIMENTS.md)
+[GitHub](https://github.com/hardwork-xu/shared-prefix-attention) · [English](README.md) · [研究说明](docs/zh/RESEARCH.md) · [API](docs/zh/API.md) · [实验](docs/zh/EXPERIMENTS.md)
 
-[![CI](https://github.com/hardwork-xu/prefixfold/actions/workflows/ci.yml/badge.svg)](https://github.com/hardwork-xu/prefixfold/actions/workflows/ci.yml)
+[![CI](https://github.com/hardwork-xu/shared-prefix-attention/actions/workflows/ci.yml/badge.svg)](https://github.com/hardwork-xu/shared-prefix-attention/actions/workflows/ci.yml)
 [![许可证：MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CPU：NumPy](https://img.shields.io/badge/backend-CPU%20%2F%20NumPy-blue.svg)](pyproject.toml)
 
