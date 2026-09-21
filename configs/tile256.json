@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "seed": 20260921,
+  "warmup": 5,
+  "repetitions": 30,
+  "primary_case": "shared_b16_p4096",
+  "targets": {
+    "kv_reduction_fraction": 0.8,
+    "torch_sdpa_speedup": 1.25
+  },
+  "plan": {
+    "tile_tokens": 256,
+    "workspace_bytes": 8388608
+  },
+  "cases": [
+    {
+      "name": "shared_b16_p4096",
+      "batch": 16,
+      "heads": 4,
+      "prefix": 4096,
+      "suffix": 128,
+      "dim": 64
+    }
+  ],
+  "experiment_classification": "Exploratory tile sensitivity after primary experiment; original targets and primary protocol unchanged. / 主实验后的探索性分块敏感性分析；原目标和主实验方案保持不变。"
+}

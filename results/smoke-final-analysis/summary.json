@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "run_id": "20260921T115731Z-7276919d",
+  "source": {
+    "git_revision": "7eeb6714164e1f21c3833d94206ffa38720d23e1",
+    "tested_source_dirty": true,
+    "source_sha256": "ffb133cf2c20d663240dc99865c9320ddf82b9aed6102cd9fa97914e7fef4f38",
+    "file_sha256": {
+      "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+      "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "src/prefixfold/attention.py": "dd78d7786c9dbe2431854ffca55ce7ab35237d06622c6a5625724319232051f1",
+      "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+      "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+      "benchmark.py": "8470515b3e0a67305e88e14527fc460646b43ffaf542f5c21103ab0ef216e1f9"
+    }
+  },
+  "environment": {
+    "os": "Darwin",
+    "os_release": "25.6.0",
+    "architecture": "arm64",
+    "python": "3.12.2",
+    "logical_cpus": 10,
+    "backend": "cpu",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "cpu_model": "Apple M1 Pro",
+    "physical_memory_bytes": 17179869184
+  },
+  "rows": [
+    {
+      "case": "smoke",
+      "variant": "numpy_dense",
+      "status": "passed",
+      "samples": 2,
+      "median_ms": 0.0693125,
+      "min_ms": 0.050709,
+      "max_ms": 0.087916,
+      "mean_ms": 0.0693125,
+      "stdev_ms": 0.026309322007607872,
+      "first_call_ms": 0.256125,
+      "kv_payload_bytes": 72704,
+      "peak_worker_rss_bytes": 186957824,
+      "query_vectors_per_second": 115419.29666366096,
+      "torch_sdpa_speedup": 1.6636609558160504,
+      "kv_reduction_fraction": 0.0,
+      "correctness": {
+        "passed": true,
+        "atol": 3e-05,
+        "rtol": 3e-05,
+        "max_abs_error": 4.481995740102107e-07,
+        "max_relative_error": 9.096071739713545e-05,
+        "rmse": 5.395587230963113e-08,
+        "reference": "dense_reference_float64"
+      },
+      "setup": {
+        "common_fixture_ms": 3.404334,
+        "variant_materialization_ms": 0.391708
+      }
+    },
+    {
+      "case": "smoke",
+      "variant": "torch_sdpa",
+      "status": "passed",
+      "samples": 2,
+      "median_ms": 0.1153125,
+      "min_ms": 0.10625,
+      "max_ms": 0.124375,
+      "mean_ms": 0.1153125,
+      "stdev_ms": 0.012816310409006175,
+      "first_call_ms": 8.189916,
+      "kv_payload_bytes": 72704,
+      "peak_worker_rss_bytes": 196182016,
+      "query_vectors_per_second": 69376.69376693766,
+      "torch_sdpa_speedup": 1.0,
+      "kv_reduction_fraction": 0.0,
+      "correctness": {
+        "passed": true,
+        "atol": 3e-05,
+        "rtol": 3e-05,
+        "max_abs_error": 1.8216103842005893e-07,
+        "max_relative_error": 0.00017743392474743253,
+        "rmse": 4.135618183913966e-08,
+        "reference": "dense_reference_float64"
+      },
+      "setup": {
+        "common_fixture_ms": 0.176875,
+        "variant_materialization_ms": 4.508375
+      }
+    },
+    {
+      "case": "smoke",
+      "variant": "prefixfold",
+      "status": "passed",
+      "samples": 2,
+      "median_ms": 0.2164375,
+      "min_ms": 0.207625,
+      "max_ms": 0.22525,
+      "mean_ms": 0.2164375,
+      "stdev_ms": 0.012462757018412901,
+      "first_call_ms": 0.385167,
+      "kv_payload_bytes": 23808,
+      "peak_worker_rss_bytes": 193642496,
+      "query_vectors_per_second": 36962.171527577244,
+      "torch_sdpa_speedup": 0.5327750505342189,
+      "kv_reduction_fraction": 0.6725352112676056,
+      "correctness": {
+        "passed": true,
+        "atol": 3e-05,
+        "rtol": 3e-05,
+        "max_abs_error": 9.85485591187274e-08,
+        "max_relative_error": 8.291662896153606e-05,
+        "rmse": 2.6827595693387345e-08,
+        "reference": "dense_reference_float64"
+      },
+      "setup": {
+        "common_fixture_ms": 0.19875,
+        "variant_materialization_ms": 0.008833
+      }
+    },
+    {
+      "case": "smoke",
+      "variant": "ungrouped",
+      "status": "passed",
+      "samples": 2,
+      "median_ms": 0.507521,
+      "min_ms": 0.436417,
+      "max_ms": 0.578625,
+      "mean_ms": 0.507521,
+      "stdev_ms": 0.10055624113897652,
+      "first_call_ms": 0.480417,
+      "kv_payload_bytes": 23808,
+      "peak_worker_rss_bytes": 194052096,
+      "query_vectors_per_second": 15762.89454032444,
+      "torch_sdpa_speedup": 0.22720734708514523,
+      "kv_reduction_fraction": 0.6725352112676056,
+      "correctness": {
+        "passed": true,
+        "atol": 3e-05,
+        "rtol": 3e-05,
+        "max_abs_error": 1.7713962230381242e-07,
+        "max_relative_error": 0.00017639955623845768,
+        "rmse": 3.679499715975702e-08,
+        "reference": "dense_reference_float64"
+      },
+      "setup": {
+        "common_fixture_ms": 0.211667,
+        "variant_materialization_ms": 0.009292
+      }
+    }
+  ],
+  "primary_verdict": {
+    "workload": "smoke",
+    "targets": {
+      "kv_reduction_fraction": 0.8,
+      "torch_sdpa_speedup": 1.25
+    },
+    "measured": {
+      "kv_reduction_fraction": 0.6725352112676056,
+      "torch_sdpa_speedup": 0.5327750505342189
+    },
+    "met": {
+      "kv_reduction_fraction": false,
+      "torch_sdpa_speedup": false
+    }
+  },
+  "all_correct": true
+}

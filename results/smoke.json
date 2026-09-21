@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "run_id": "20260921T115411Z-d37911c8",
+  "started_at": "2026-09-21T11:54:11.079517+00:00",
+  "status": "passed",
+  "command": "python benchmark.py --config smoke.json --output smoke.json",
+  "config": {
+    "schema_version": 1,
+    "seed": 20260921,
+    "warmup": 1,
+    "repetitions": 2,
+    "primary_case": "smoke",
+    "targets": {
+      "kv_reduction_fraction": 0.8,
+      "torch_sdpa_speedup": 1.25
+    },
+    "plan": {
+      "tile_tokens": 32,
+      "workspace_bytes": 1048576
+    },
+    "cases": [
+      {
+        "name": "smoke",
+        "batch": 4,
+        "heads": 2,
+        "prefix": 65,
+        "suffix": 7,
+        "dim": 16,
+        "ragged": true
+      }
+    ]
+  },
+  "config_sha256": "a3dbdfd2ce05824ab072f4fee5b5431f0d2645ddc707b187eb041de29517c60d",
+  "source": {
+    "git_revision": "7eeb6714164e1f21c3833d94206ffa38720d23e1",
+    "tested_source_dirty": true,
+    "source_sha256": "28b3eb825674b36e9d94c844c8c1453a882d921c6402e7e0beb222ee9bbb0800",
+    "file_sha256": {
+      "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+      "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "src/prefixfold/attention.py": "dd78d7786c9dbe2431854ffca55ce7ab35237d06622c6a5625724319232051f1",
+      "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+      "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+      "benchmark.py": "218a2b64b72673231b76d569529837dc64c98cbf6d751e4f2a6d884513ff95a6"
+    }
+  },
+  "environment": {
+    "os": "Darwin",
+    "os_release": "25.6.0",
+    "architecture": "arm64",
+    "python": "3.12.2",
+    "logical_cpus": 10,
+    "backend": "cpu",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    }
+  },
+  "protocol": {
+    "timing_scope": "compute_only; fixture creation and dense materialization reported separately",
+    "ordering": "seeded shuffled variants within every warmup and measured round",
+    "memory": "whole-worker process peak RSS including imports, setup, correctness and timed calls; not variant workspace",
+    "kv_payload": "actual allocated K/V array bytes; excludes mask, output and temporary workspace",
+    "throughput_unit": "query_vectors_per_second (batch * heads / seconds); not generated tokens",
+    "data": "seeded synthetic float32 normal Q/K/V; no pretrained model or real request trace",
+    "tail_latency": "not claimed; 30 observations are insufficient for reliable extreme tails",
+    "thread_note": "VECLIB_MAXIMUM_THREADS=1 requested; Accelerate enforcement is not observable through threadpoolctl"
+  },
+  "workloads": [
+    {
+      "case": {
+        "name": "smoke",
+        "batch": 4,
+        "heads": 2,
+        "prefix": 65,
+        "suffix": 7,
+        "dim": 16,
+        "ragged": true
+      },
+      "variants": {
+        "numpy_dense": {
+          "status": "passed",
+          "samples_ms": [
+            0.051792,
+            0.048125
+          ],
+          "warmup_ms": [
+            0.09225
+          ],
+          "correctness": {
+            "passed": true,
+            "atol": 3e-05,
+            "rtol": 3e-05,
+            "max_abs_error": 4.481995740102107e-07,
+            "max_relative_error": 9.096071739713545e-05,
+            "rmse": 5.395587230963113e-08,
+            "reference": "dense_reference_float64"
+          },
+          "setup": {
+            "common_fixture_ms": 0.983625,
+            "variant_materialization_ms": 0.053167
+          },
+          "first_call_ms": 0.0625,
+          "kv_payload_bytes": 72704,
+          "mask_bytes": 284,
+          "peak_rss_after_setup_bytes": 222248960,
+          "suffix_lengths": [
+            0,
+            6,
+            3,
+            0
+          ],
+          "numpy_version": "2.2.6",
+          "torch_version": "2.8.0",
+          "torch_threads": 1,
+          "threadpools": [
+            {
+              "user_api": "openmp",
+              "internal_api": "openmp",
+              "num_threads": 1,
+              "version": null
+            }
+          ],
+          "peak_rss_bytes": 222412800
+        },
+        "torch_sdpa": {
+          "status": "passed",
+          "samples_ms": [
+            0.131542,
+            0.087833
+          ],
+          "warmup_ms": [
+            0.169792
+          ],
+          "correctness": {
+            "passed": true,
+            "atol": 3e-05,
+            "rtol": 3e-05,
+            "max_abs_error": 1.8216103842005893e-07,
+            "max_relative_error": 0.00017743392474743253,
+            "rmse": 4.135618183913966e-08,
+            "reference": "dense_reference_float64"
+          },
+          "setup": {
+            "common_fixture_ms": 0.177208,
+            "variant_materialization_ms": 0.599542
+          },
+          "first_call_ms": 1.315958,
+          "kv_payload_bytes": 72704,
+          "mask_bytes": 284,
+          "peak_rss_after_setup_bytes": 194199552,
+          "suffix_lengths": [
+            0,
+            6,
+            3,
+            0
+          ],
+          "numpy_version": "2.2.6",
+          "torch_version": "2.8.0",
+          "torch_threads": 1,
+          "threadpools": [
+            {
+              "user_api": "openmp",
+              "internal_api": "openmp",
+              "num_threads": 1,
+              "version": null
+            }
+          ],
+          "peak_rss_bytes": 195510272
+        },
+        "prefixfold": {
+          "status": "passed",
+          "samples_ms": [
+            0.265458,
+            0.220041
+          ],
+          "warmup_ms": [
+            0.388458
+          ],
+          "correctness": {
+            "passed": true,
+            "atol": 3e-05,
+            "rtol": 3e-05,
+            "max_abs_error": 9.85485591187274e-08,
+            "max_relative_error": 8.291662896153606e-05,
+            "rmse": 2.6827595693387345e-08,
+            "reference": "dense_reference_float64"
+          },
+          "setup": {
+            "common_fixture_ms": 0.171042,
+            "variant_materialization_ms": 0.00875
+          },
+          "first_call_ms": 0.218125,
+          "kv_payload_bytes": 23808,
+          "mask_bytes": 0,
+          "peak_rss_after_setup_bytes": 193347584,
+          "suffix_lengths": [
+            0,
+            6,
+            3,
+            0
+          ],
+          "numpy_version": "2.2.6",
+          "torch_version": "2.8.0",
+          "torch_threads": 1,
+          "threadpools": [
+            {
+              "user_api": "openmp",
+              "internal_api": "openmp",
+              "num_threads": 1,
+              "version": null
+            }
+          ],
+          "peak_rss_bytes": 193478656
+        },
+        "ungrouped": {
+          "status": "passed",
+          "samples_ms": [
+            0.552584,
+            0.459125
+          ],
+          "warmup_ms": [
+            0.477084
+          ],
+          "correctness": {
+            "passed": true,
+            "atol": 3e-05,
+            "rtol": 3e-05,
+            "max_abs_error": 1.7713962230381242e-07,
+            "max_relative_error": 0.00017639955623845768,
+            "rmse": 3.679499715975702e-08,
+            "reference": "dense_reference_float64"
+          },
+          "setup": {
+            "common_fixture_ms": 0.210125,
+            "variant_materialization_ms": 0.009167
+          },
+          "first_call_ms": 0.486041,
+          "kv_payload_bytes": 23808,
+          "mask_bytes": 0,
+          "peak_rss_after_setup_bytes": 193789952,
+          "suffix_lengths": [
+            0,
+            6,
+            3,
+            0
+          ],
+          "numpy_version": "2.2.6",
+          "torch_version": "2.8.0",
+          "torch_threads": 1,
+          "threadpools": [
+            {
+              "user_api": "openmp",
+              "internal_api": "openmp",
+              "num_threads": 1,
+              "version": null
+            }
+          ],
+          "peak_rss_bytes": 193904640
+        }
+      },
+      "measurement_order": [
+        {
+          "phase": "warmup",
+          "variants": [
+            "torch_sdpa",
+            "prefixfold",
+            "ungrouped",
+            "numpy_dense"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "prefixfold",
+            "numpy_dense",
+            "torch_sdpa",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "ungrouped",
+            "numpy_dense",
+            "torch_sdpa",
+            "prefixfold"
+          ]
+        }
+      ]
+    }
+  ],
+  "completed_at": "2026-09-21T11:54:25.341867+00:00"
+}

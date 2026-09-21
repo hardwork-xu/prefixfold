@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "online-normalizer",
+      "title": "Online normalizer calculation for softmax",
+      "authors": [
+        "Maxim Milakov",
+        "Natalia Gimelshein"
+      ],
+      "year": "2018",
+      "version_reviewed": "arXiv:1805.02867v2",
+      "url": "https://arxiv.org/abs/1805.02867v2",
+      "full_text_or_official_url_reviewed": "https://arxiv.org/html/1805.02867v2",
+      "primary_source": true,
+      "accessed_at_utc": "2026-09-21T11:41:08Z",
+      "review_scope": "Section 3, Algorithm 3 and Theorem 1",
+      "relationship": {
+        "en": "Running maximum and normalizer rescaling; prior art, not a new project algorithm.",
+        "zh": "运行最大值与归一化项重缩放；属于已有方法，不是项目新算法。"
+      },
+      "code_copied": false
+    },
+    {
+      "id": "flashattention",
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "authors": [
+        "Tri Dao",
+        "Daniel Y. Fu",
+        "Stefano Ermon",
+        "Atri Rudra",
+        "Christopher Ré"
+      ],
+      "year": "2022",
+      "version_reviewed": "arXiv:2205.14135v2",
+      "url": "https://arxiv.org/abs/2205.14135v2",
+      "full_text_or_official_url_reviewed": "https://arxiv.org/html/2205.14135v2",
+      "primary_source": true,
+      "accessed_at_utc": "2026-09-21T11:41:08Z",
+      "review_scope": "Section 3.1, Algorithm 1 and Appendix C",
+      "relationship": {
+        "en": "Tiled exact attention and reduction invariants; GPU IO bounds do not prove CPU behavior.",
+        "zh": "分块精确注意力与归约不变量；GPU IO 界不能证明 CPU 行为。"
+      },
+      "code_copied": false
+    },
+    {
+      "id": "cascade",
+      "title": "Cascade Inference: Memory Bandwidth Efficient Shared Prefix Batch Decoding",
+      "authors": [
+        "Zihao Ye",
+        "Ruihang Lai",
+        "Bo-Ru Lu",
+        "Chien-Yu Lin",
+        "Size Zheng",
+        "Lequn Chen",
+        "Tianqi Chen",
+        "Luis Ceze"
+      ],
+      "year": "2024",
+      "version_reviewed": "2024-02-02",
+      "url": "https://flashinfer.ai/2024/02/02/cascade-inference.html",
+      "full_text_or_official_url_reviewed": "https://flashinfer.ai/2024/02/02/cascade-inference.html",
+      "primary_source": true,
+      "accessed_at_utc": "2026-09-21T11:41:08Z",
+      "review_scope": "Recursive Attention and Cascade Inference: The Algorithm",
+      "relationship": {
+        "en": "Direct prior art for prefix/suffix decomposition and attention-state merging.",
+        "zh": "前缀后缀分解与注意力状态合并的直接先例。"
+      },
+      "code_copied": false
+    },
+    {
+      "id": "hydragen",
+      "title": "Hydragen: High-Throughput LLM Inference with Shared Prefixes",
+      "authors": [
+        "Jordan Juravsky",
+        "Bradley Brown",
+        "Ryan Ehrlich",
+        "Daniel Y. Fu",
+        "Christopher Ré",
+        "Azalia Mirhoseini"
+      ],
+      "year": "2024",
+      "version_reviewed": "arXiv:2402.05099v2 metadata; v1 full text",
+      "url": "https://arxiv.org/abs/2402.05099v2",
+      "full_text_or_official_url_reviewed": "https://arxiv.org/html/2402.05099v1",
+      "primary_source": true,
+      "accessed_at_utc": "2026-09-21T11:41:08Z",
+      "review_scope": "Sections 3.1-3.2; official repository README",
+      "relationship": {
+        "en": "Direct prior art for cross-sequence query batching over shared KV.",
+        "zh": "相同 KV 上跨序列查询分组的直接先例。"
+      },
+      "code_copied": false
+    },
+    {
+      "id": "codec",
+      "title": "CoDec: Prefix-Shared Decoding Kernel for LLMs",
+      "authors": [
+        "Zhibin Wang",
+        "Rui Ning",
+        "Chao Fang",
+        "Zhonghui Zhang",
+        "Xi Lin",
+        "Shaobo Ma",
+        "Mo Zhou",
+        "Xue Li",
+        "Zhongfeng Wang",
+        "Chengying Huan",
+        "Rong Gu",
+        "Kun Yang",
+        "Guihai Chen",
+        "Sheng Zhong",
+        "Chen Tian"
+      ],
+      "year": "2026",
+      "version_reviewed": "arXiv:2505.17694v2; revised 2026-03-28",
+      "url": "https://arxiv.org/abs/2505.17694v2",
+      "full_text_or_official_url_reviewed": "https://arxiv.org/html/2505.17694v2",
+      "primary_source": true,
+      "accessed_at_utc": "2026-09-21T11:41:08Z",
+      "review_scope": "Abstract, Introduction and Sections 2-3",
+      "relationship": {
+        "en": "Irregular prefix tree and GPU scheduling context; not implemented or benchmarked here. v1 title was FlashForge: Ultra-Efficient Prefix-Aware Attention for LLM Decoding.",
+        "zh": "不规则前缀树与 GPU 调度背景；本项目未实现或测试。v1 标题为 FlashForge: Ultra-Efficient Prefix-Aware Attention for LLM Decoding。"
+      },
+      "code_copied": false
+    },
+    {
+      "id": "flashinfer-cascade-api",
+      "title": "flashinfer.cascade",
+      "authors": [
+        "FlashInfer contributors"
+      ],
+      "year": null,
+      "version_reviewed": "Documentation observed as 0.6.18 on access date",
+      "url": "https://docs.flashinfer.ai/api/cascade.html",
+      "full_text_or_official_url_reviewed": "https://docs.flashinfer.ai/api/cascade.html",
+      "primary_source": true,
+      "accessed_at_utc": "2026-09-21T11:41:08Z",
+      "review_scope": "Merge Attention States API index",
+      "relationship": {
+        "en": "Official state-merge implementation reference; not installed as a dependency.",
+        "zh": "官方状态合并实现参考；未作为依赖安装。"
+      },
+      "code_copied": false
+    },
+    {
+      "id": "pytorch-sdpa",
+      "title": "torch.nn.functional.scaled_dot_product_attention",
+      "authors": [
+        "PyTorch contributors"
+      ],
+      "year": null,
+      "version_reviewed": "PyTorch 2.8 documentation",
+      "url": "https://docs.pytorch.org/docs/2.8/generated/torch.nn.functional.scaled_dot_product_attention.html",
+      "full_text_or_official_url_reviewed": "https://docs.pytorch.org/docs/2.8/generated/torch.nn.functional.scaled_dot_product_attention.html",
+      "primary_source": true,
+      "accessed_at_utc": "2026-09-21T11:41:08Z",
+      "review_scope": "Signature, equivalent semantics, dropout warning and causal mask definition",
+      "relationship": {
+        "en": "Baseline API semantics; actual runtime version must be taken from benchmark records.",
+        "zh": "基线 API 语义；实际运行时版本以基准记录为准。"
+      },
+      "code_copied": false
+    },
+    {
+      "id": "hydragen-implementation",
+      "title": "Hydragen official implementation",
+      "authors": [
+        "Hydragen contributors"
+      ],
+      "year": null,
+      "version_reviewed": "Repository viewed on access date; no code copied",
+      "url": "https://github.com/ScalingIntelligence/hydragen",
+      "full_text_or_official_url_reviewed": "https://github.com/ScalingIntelligence/hydragen",
+      "primary_source": true,
+      "accessed_at_utc": "2026-09-21T11:41:08Z",
+      "review_scope": "README and license identification",
+      "relationship": {
+        "en": "Official reference implementation under Apache-2.0.",
+        "zh": "官方参考实现，许可证为 Apache-2.0。"
+      },
+      "code_copied": false
+    },
+    {
+      "id": "flashinfer-implementation",
+      "title": "FlashInfer official implementation",
+      "authors": [
+        "FlashInfer contributors"
+      ],
+      "year": null,
+      "version_reviewed": "Repository viewed on access date; no code copied",
+      "url": "https://github.com/flashinfer-ai/flashinfer",
+      "full_text_or_official_url_reviewed": "https://github.com/flashinfer-ai/flashinfer",
+      "primary_source": true,
+      "accessed_at_utc": "2026-09-21T11:41:08Z",
+      "review_scope": "README and license identification",
+      "relationship": {
+        "en": "Official GPU library reference under Apache-2.0.",
+        "zh": "官方 GPU 库参考，许可证为 Apache-2.0。"
+      },
+      "code_copied": false
+    }
+  ],
+  "scope": {
+    "en": "Focused primary-source review, not an exhaustive survey. No reported third-party speedup is a PrefixFold result.",
+    "zh": "聚焦的一手资料核查，不是穷尽式综述。第三方报告的加速均不属于 PrefixFold 实测结果。"
+  }
+}

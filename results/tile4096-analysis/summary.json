@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "run_id": "20260921T120200Z-c10f0519",
+  "source": {
+    "git_revision": "99e2958d71a20396308e931fca53cbdcdff98773",
+    "tested_source_dirty": false,
+    "source_sha256": "ad2cbe25b6f5617ca2eb3906ffb52ba54fe8263b9c0cdca9eb054c66f1a66563",
+    "file_sha256": {
+      "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+      "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "src/prefixfold/attention.py": "dd78d7786c9dbe2431854ffca55ce7ab35237d06622c6a5625724319232051f1",
+      "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+      "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+      "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215"
+    }
+  },
+  "environment": {
+    "os": "Darwin",
+    "os_release": "25.6.0",
+    "architecture": "arm64",
+    "python": "3.12.2",
+    "logical_cpus": 10,
+    "backend": "cpu",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "cpu_model": "Apple M1 Pro",
+    "physical_memory_bytes": 17179869184
+  },
+  "rows": [
+    {
+      "case": "shared_b16_p4096",
+      "variant": "numpy_dense",
+      "status": "passed",
+      "samples": 30,
+      "median_ms": 6.415625,
+      "min_ms": 5.9975,
+      "max_ms": 8.55625,
+      "mean_ms": 6.602748633333333,
+      "stdev_ms": 0.5715989266806291,
+      "first_call_ms": 22.639,
+      "kv_payload_bytes": 138412032,
+      "peak_worker_rss_bytes": 405340160,
+      "query_vectors_per_second": 9975.64539698003,
+      "torch_sdpa_speedup": 1.0664848709206038,
+      "kv_reduction_fraction": 0.0,
+      "correctness": {
+        "passed": true,
+        "atol": 3e-05,
+        "rtol": 3e-05,
+        "max_abs_error": 4.5623295603230973e-08,
+        "max_relative_error": 0.0006679450893659485,
+        "rmse": 8.177194494219629e-09,
+        "reference": "dense_reference_float64"
+      },
+      "setup": {
+        "common_fixture_ms": 18.948417,
+        "variant_materialization_ms": 23.883292
+      }
+    },
+    {
+      "case": "shared_b16_p4096",
+      "variant": "torch_sdpa",
+      "status": "passed",
+      "samples": 30,
+      "median_ms": 6.842167,
+      "min_ms": 6.4255,
+      "max_ms": 8.683208,
+      "mean_ms": 7.0374347,
+      "stdev_ms": 0.5129286789684179,
+      "first_call_ms": 31.7965,
+      "kv_payload_bytes": 138412032,
+      "peak_worker_rss_bytes": 401522688,
+      "query_vectors_per_second": 9353.761754134326,
+      "torch_sdpa_speedup": 1.0,
+      "kv_reduction_fraction": 0.0,
+      "correctness": {
+        "passed": true,
+        "atol": 3e-05,
+        "rtol": 3e-05,
+        "max_abs_error": 3.731159094882974e-08,
+        "max_relative_error": 0.0008469646524637853,
+        "rmse": 8.498636657386736e-09,
+        "reference": "dense_reference_float64"
+      },
+      "setup": {
+        "common_fixture_ms": 17.232917,
+        "variant_materialization_ms": 38.781209
+      }
+    },
+    {
+      "case": "shared_b16_p4096",
+      "variant": "prefixfold",
+      "status": "passed",
+      "samples": 30,
+      "median_ms": 1.9346665,
+      "min_ms": 1.540042,
+      "max_ms": 2.57825,
+      "mean_ms": 1.9888013333333334,
+      "stdev_ms": 0.2441758014290938,
+      "first_call_ms": 3.267166,
+      "kv_payload_bytes": 12582912,
+      "peak_worker_rss_bytes": 272433152,
+      "query_vectors_per_second": 33080.636895299525,
+      "torch_sdpa_speedup": 3.5366131578750135,
+      "kv_reduction_fraction": 0.9090909090909091,
+      "correctness": {
+        "passed": true,
+        "atol": 3e-05,
+        "rtol": 3e-05,
+        "max_abs_error": 2.110409786995615e-07,
+        "max_relative_error": 0.0008146147995178862,
+        "rmse": 3.0348916245169606e-08,
+        "reference": "dense_reference_float64"
+      },
+      "setup": {
+        "common_fixture_ms": 19.19575,
+        "variant_materialization_ms": 0.025792
+      }
+    },
+    {
+      "case": "shared_b16_p4096",
+      "variant": "ungrouped",
+      "status": "passed",
+      "samples": 30,
+      "median_ms": 3.9918545,
+      "min_ms": 3.935959,
+      "max_ms": 5.514166,
+      "mean_ms": 4.2033805,
+      "stdev_ms": 0.4414082161340039,
+      "first_call_ms": 5.383958,
+      "kv_payload_bytes": 12582912,
+      "peak_worker_rss_bytes": 265863168,
+      "query_vectors_per_second": 16032.648484557742,
+      "torch_sdpa_speedup": 1.7140321622443904,
+      "kv_reduction_fraction": 0.9090909090909091,
+      "correctness": {
+        "passed": true,
+        "atol": 3e-05,
+        "rtol": 3e-05,
+        "max_abs_error": 4.229674318428911e-08,
+        "max_relative_error": 0.00046372178904417093,
+        "rmse": 8.217177826920281e-09,
+        "reference": "dense_reference_float64"
+      },
+      "setup": {
+        "common_fixture_ms": 17.987125,
+        "variant_materialization_ms": 0.033292
+      }
+    }
+  ],
+  "primary_verdict": {
+    "workload": "shared_b16_p4096",
+    "targets": {
+      "kv_reduction_fraction": 0.8,
+      "torch_sdpa_speedup": 1.25
+    },
+    "measured": {
+      "kv_reduction_fraction": 0.9090909090909091,
+      "torch_sdpa_speedup": 3.5366131578750135
+    },
+    "met": {
+      "kv_reduction_fraction": true,
+      "torch_sdpa_speedup": true
+    }
+  },
+  "all_correct": true
+}
