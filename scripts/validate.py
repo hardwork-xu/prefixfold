@@ -154,7 +154,7 @@ def main() -> int:
         [str(UV), "tool", "run", "--from", "cffconvert==2.0.0", "cffconvert", "--validate"],
     )
     run("privacy_and_delivery", [str(PY), "scripts/audit.py"])
-    run("git_diff", ["git", "diff", "--check"])
+    run("git_diff", ["git", "diff", "--check", "HEAD"])
     benchmark = json.loads((ROOT / "results/benchmark.json").read_text())
     current = {
         p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest()

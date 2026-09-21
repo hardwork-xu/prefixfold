@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-21T12:36:41.475360+00:00",
+  "repository": "https://github.com/hardwork-xu/prefixfold",
+  "visibility": "PUBLIC",
+  "verified_revision": "1f66376f314957cbfbaed6051330f34ad0580006",
+  "ci": {
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/hardwork-xu/prefixfold/actions/runs/35600203428",
+    "jobs": [
+      {
+        "name": "python (3.11)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/hardwork-xu/prefixfold/actions/runs/35600203428/job/106334241901",
+        "started_at": "2026-09-21T12:33:18Z",
+        "completed_at": "2026-09-21T12:33:56Z",
+        "executed_steps": [
+          "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "Run python -m pip install uv==0.8.22",
+          "Run uv sync --frozen --group bench",
+          "Run uv run --frozen ruff check . && uv run --frozen ruff format --check .",
+          "Run uv run --frozen mypy src/prefixfold",
+          "Run uv run --frozen pytest -q",
+          "Run uv run --frozen prefixfold demo",
+          "Run uv run --frozen python scripts/check_docs.py",
+          "Run uv run --frozen python scripts/audit.py",
+          "Run uv run --frozen python -m build && uv run --frozen twine check dist/*"
+        ]
+      },
+      {
+        "name": "python (3.13)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/hardwork-xu/prefixfold/actions/runs/35600203428/job/106334242172",
+        "started_at": "2026-09-21T12:33:18Z",
+        "completed_at": "2026-09-21T12:33:55Z",
+        "executed_steps": [
+          "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "Run python -m pip install uv==0.8.22",
+          "Run uv sync --frozen --group bench",
+          "Run uv run --frozen ruff check . && uv run --frozen ruff format --check .",
+          "Run uv run --frozen mypy src/prefixfold",
+          "Run uv run --frozen pytest -q",
+          "Run uv run --frozen prefixfold demo",
+          "Run uv run --frozen python scripts/check_docs.py",
+          "Run uv run --frozen python scripts/audit.py",
+          "Run uv run --frozen python -m build && uv run --frozen twine check dist/*"
+        ]
+      },
+      {
+        "name": "container",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/hardwork-xu/prefixfold/actions/runs/35600203428/job/106334242179",
+        "started_at": "2026-09-21T12:33:19Z",
+        "completed_at": "2026-09-21T12:33:39Z",
+        "executed_steps": [
+          "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "Run docker build -t prefixfold:ci .",
+          "Run docker run --rm prefixfold:ci"
+        ]
+      },
+      {
+        "name": "python (3.12)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/hardwork-xu/prefixfold/actions/runs/35600203428/job/106334242231",
+        "started_at": "2026-09-21T12:33:18Z",
+        "completed_at": "2026-09-21T12:33:54Z",
+        "executed_steps": [
+          "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "Run python -m pip install uv==0.8.22",
+          "Run uv sync --frozen --group bench",
+          "Run uv run --frozen ruff check . && uv run --frozen ruff format --check .",
+          "Run uv run --frozen mypy src/prefixfold",
+          "Run uv run --frozen pytest -q",
+          "Run uv run --frozen prefixfold demo",
+          "Run uv run --frozen python scripts/check_docs.py",
+          "Run uv run --frozen python scripts/audit.py",
+          "Run uv run --frozen python -m build && uv run --frozen twine check dist/*"
+        ]
+      }
+    ]
+  },
+  "local_container": "not run: Docker absent",
+  "remote_container": "build and demo passed on ubuntu-22.04 GitHub-hosted runner",
+  "transport": "Initial direct Git HTTPS connection failed; retry using existing host proxy succeeded. No global networking or Git identity changed.",
+  "source_integrity": "Local and remote commit IDs matched after push; commits use verified public noreply identity.",
+  "verified_remote_head": "1f66376f314957cbfbaed6051330f34ad0580006"
+}

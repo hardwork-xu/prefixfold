@@ -2,8 +2,9 @@
 
 **Exact shared-prefix decode attention on CPU.** A small numerical library that shares long KV prefixes across requests, groups their matrix multiplications, and merges tiled softmax states.
 
-[简体中文](README_zh.md) · [Research](docs/en/RESEARCH.md) · [API](docs/en/API.md) · [Experiments](docs/en/EXPERIMENTS.md)
+[GitHub](https://github.com/hardwork-xu/prefixfold) · [简体中文](README_zh.md) · [Research](docs/en/RESEARCH.md) · [API](docs/en/API.md) · [Experiments](docs/en/EXPERIMENTS.md)
 
+[![CI](https://github.com/hardwork-xu/prefixfold/actions/workflows/ci.yml/badge.svg)](https://github.com/hardwork-xu/prefixfold/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CPU: NumPy](https://img.shields.io/badge/backend-CPU%20%2F%20NumPy-blue.svg)](pyproject.toml)
 

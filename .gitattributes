@@ -1,0 +1,2 @@
+# Preserve tool-output whitespace in raw evidence logs / 原始工具日志保留空白。
+results/**/*.log -whitespace

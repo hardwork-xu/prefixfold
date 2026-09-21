@@ -8,3 +8,4 @@ authors:
     website: "https://github.com/hardwork-xu"
 license: MIT
 abstract: "A reproducible CPU implementation of established shared-prefix attention decomposition and grouping. / 可复现的 CPU 共享前缀注意力分解与分组实现。"
+repository-code: "https://github.com/hardwork-xu/prefixfold"
