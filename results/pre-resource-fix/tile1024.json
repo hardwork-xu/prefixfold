@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "run_id": "20260921T120736Z-ab5c63ad",
+  "started_at": "2026-09-21T12:07:36.345904+00:00",
+  "status": "passed",
+  "command": "python benchmark.py --config configs/tile1024.json --output results/tile1024.json --variants prefixfold ungrouped torch_sdpa numpy_dense --timeout 120",
+  "config": {
+    "schema_version": 1,
+    "seed": 20260921,
+    "warmup": 5,
+    "repetitions": 30,
+    "primary_case": "shared_b16_p4096",
+    "targets": {
+      "kv_reduction_fraction": 0.8,
+      "torch_sdpa_speedup": 1.25
+    },
+    "plan": {
+      "tile_tokens": 1024,
+      "workspace_bytes": 8388608
+    },
+    "cases": [
+      {
+        "name": "shared_b16_p4096",
+        "batch": 16,
+        "heads": 4,
+        "prefix": 4096,
+        "suffix": 128,
+        "dim": 64
+      }
+    ],
+    "experiment_classification": "Exploratory tile sensitivity after primary experiment; original targets and primary protocol unchanged. / 主实验后的探索性分块敏感性分析；原目标和主实验方案保持不变。"
+  },
+  "config_sha256": "665bb92990edaf784bf8a51f855b70a7a553d44e5c79e44bb77608ba9f0348b8",
+  "source": {
+    "git_revision": "99e2958d71a20396308e931fca53cbdcdff98773",
+    "tested_source_dirty": false,
+    "source_sha256": "ad2cbe25b6f5617ca2eb3906ffb52ba54fe8263b9c0cdca9eb054c66f1a66563",
+    "file_sha256": {
+      "src/prefixfold/__init__.py": "cccf52516ec79758cbbe1bb4b0e5b179cdad879e434ab84f801d145988e0bd00",
+      "src/prefixfold/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "src/prefixfold/attention.py": "dd78d7786c9dbe2431854ffca55ce7ab35237d06622c6a5625724319232051f1",
+      "src/prefixfold/cache.py": "faa7ffb1f86fe04061b1c5bb2d7687ee36cd1da41330e59a99136a405fbe0f7c",
+      "src/prefixfold/cli.py": "a8eea73f9ecd0031483689e0806978c4d0b4180301566f68ca0ea286bb903ea2",
+      "benchmark.py": "4fbf59884913223c40eb5b0a75313c565f624eec1680e17cf28114ad76a2e215"
+    }
+  },
+  "environment": {
+    "os": "Darwin",
+    "os_release": "25.6.0",
+    "architecture": "arm64",
+    "python": "3.12.2",
+    "logical_cpus": 10,
+    "backend": "cpu",
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "cpu_model": "Apple M1 Pro",
+    "physical_memory_bytes": 17179869184
+  },
+  "protocol": {
+    "timing_scope": "compute_only; fixture creation and dense materialization reported separately",
+    "ordering": "seeded shuffled variants within every warmup and measured round",
+    "memory": "whole-worker process peak RSS including imports, setup, correctness and timed calls; not variant workspace",
+    "kv_payload": "actual allocated K/V array bytes; excludes lengths, mask, output and workspace",
+    "throughput_unit": "query_vectors_per_second (batch * heads / seconds); not generated tokens",
+    "data": "seeded synthetic float32 normal Q/K/V; no pretrained model or real request trace",
+    "tail_latency": "not claimed; 30 observations are insufficient for reliable extreme tails",
+    "thread_note": "VECLIB_MAXIMUM_THREADS=1 requested; Accelerate enforcement is not observable through threadpoolctl"
+  },
+  "workloads": [
+    {
+      "case": {
+        "name": "shared_b16_p4096",
+        "batch": 16,
+        "heads": 4,
+        "prefix": 4096,
+        "suffix": 128,
+        "dim": 64
+      },
+      "variants": {
+        "numpy_dense": {
+          "status": "passed",
+          "samples_ms": [
+            6.903542,
+            6.855292,
+            7.823917,
+            6.908333,
+            6.339958,
+            7.063459,
+            6.749292,
+            7.33775,
+            6.562833,
+            7.72625,
+            7.477959,
+            7.029375,
+            6.695875,
+            6.899791,
+            6.413834,
+            6.360625,
+            6.494625,
+            7.845625,
+            6.942083,
+            7.247541,
+            6.661708,
+            6.654209,
+            7.2125,
+            10.739792,
+            11.368083,
+            7.209167,
+            7.428291,
+            6.764709,
+            6.694333,
+            6.53775
+          ],
+          "warmup_ms": [
+            54.670958,
+            7.823875,
+            7.952875,
+            6.334708,
+            7.263541
+          ],
+          "correctness": {
+            "passed": true,
+            "atol": 3e-05,
+            "rtol": 3e-05,
+            "max_abs_error": 4.5623295603230973e-08,
+            "max_relative_error": 0.0006679450893659485,
+            "rmse": 8.177194494219629e-09,
+            "reference": "dense_reference_float64"
+          },
+          "setup": {
+            "common_fixture_ms": 18.934292,
+            "variant_materialization_ms": 48.716417
+          },
+          "first_call_ms": 26.576042,
+          "kv_payload_bytes": 138412032,
+          "mask_bytes": 67584,
+          "peak_rss_after_setup_bytes": 356024320,
+          "suffix_lengths": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "prefixfold_version": "0.1.0",
+          "numpy_version": "2.2.6",
+          "torch_version": "2.8.0",
+          "torch_threads": 1,
+          "threadpools": [
+            {
+              "user_api": "openmp",
+              "internal_api": "openmp",
+              "num_threads": 1,
+              "version": null
+            }
+          ],
+          "peak_rss_bytes": 412188672,
+          "worker_exit_code": 0
+        },
+        "torch_sdpa": {
+          "status": "passed",
+          "samples_ms": [
+            7.119458,
+            7.094583,
+            7.129209,
+            6.758375,
+            7.211042,
+            7.037833,
+            7.235458,
+            8.066333,
+            8.386875,
+            11.136791,
+            7.541417,
+            7.161375,
+            7.278375,
+            7.227167,
+            6.934917,
+            7.10525,
+            7.366417,
+            7.717791,
+            6.968541,
+            7.067667,
+            7.198666,
+            6.878417,
+            7.359542,
+            7.183708,
+            10.445792,
+            8.329083,
+            8.390334,
+            6.949709,
+            7.055667,
+            7.228667
+          ],
+          "warmup_ms": [
+            11.548667,
+            7.833125,
+            7.433125,
+            7.454417,
+            7.3395
+          ],
+          "correctness": {
+            "passed": true,
+            "atol": 3e-05,
+            "rtol": 3e-05,
+            "max_abs_error": 3.731159094882974e-08,
+            "max_relative_error": 0.0008469646524637853,
+            "rmse": 8.498636657386736e-09,
+            "reference": "dense_reference_float64"
+          },
+          "setup": {
+            "common_fixture_ms": 21.66275,
+            "variant_materialization_ms": 39.592542
+          },
+          "first_call_ms": 30.464083,
+          "kv_payload_bytes": 138412032,
+          "mask_bytes": 67584,
+          "peak_rss_after_setup_bytes": 332759040,
+          "suffix_lengths": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "prefixfold_version": "0.1.0",
+          "numpy_version": "2.2.6",
+          "torch_version": "2.8.0",
+          "torch_threads": 1,
+          "threadpools": [
+            {
+              "user_api": "openmp",
+              "internal_api": "openmp",
+              "num_threads": 1,
+              "version": null
+            }
+          ],
+          "peak_rss_bytes": 390627328,
+          "worker_exit_code": 0
+        },
+        "prefixfold": {
+          "status": "passed",
+          "samples_ms": [
+            1.790666,
+            2.167292,
+            2.155083,
+            1.715125,
+            1.674542,
+            1.997333,
+            1.93675,
+            2.44775,
+            2.680709,
+            1.668,
+            2.449875,
+            2.487375,
+            2.115833,
+            1.620208,
+            1.923833,
+            2.364708,
+            2.035333,
+            1.638125,
+            2.084208,
+            2.003959,
+            1.812125,
+            2.204875,
+            1.661959,
+            2.204875,
+            1.967875,
+            1.835667,
+            2.148958,
+            2.42875,
+            2.25575,
+            1.928291
+          ],
+          "warmup_ms": [
+            2.762792,
+            2.796084,
+            2.463958,
+            1.755292,
+            1.605791
+          ],
+          "correctness": {
+            "passed": true,
+            "atol": 3e-05,
+            "rtol": 3e-05,
+            "max_abs_error": 8.989032441314437e-08,
+            "max_relative_error": 0.0010788302769604307,
+            "rmse": 1.6404113635730082e-08,
+            "reference": "dense_reference_float64"
+          },
+          "setup": {
+            "common_fixture_ms": 21.617583,
+            "variant_materialization_ms": 0.097959
+          },
+          "first_call_ms": 3.877875,
+          "kv_payload_bytes": 12582912,
+          "mask_bytes": 0,
+          "peak_rss_after_setup_bytes": 219316224,
+          "suffix_lengths": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "prefixfold_version": "0.1.0",
+          "numpy_version": "2.2.6",
+          "torch_version": "2.8.0",
+          "torch_threads": 1,
+          "threadpools": [
+            {
+              "user_api": "openmp",
+              "internal_api": "openmp",
+              "num_threads": 1,
+              "version": null
+            }
+          ],
+          "peak_rss_bytes": 263274496,
+          "worker_exit_code": 0
+        },
+        "ungrouped": {
+          "status": "passed",
+          "samples_ms": [
+            6.880083,
+            6.833917,
+            7.241459,
+            6.8075,
+            7.144042,
+            7.0885,
+            6.684667,
+            7.029,
+            8.653167,
+            8.14525,
+            7.326,
+            6.642083,
+            7.045833,
+            6.878208,
+            6.685417,
+            6.817417,
+            6.907958,
+            7.515583,
+            6.806541,
+            7.523,
+            6.943,
+            6.945375,
+            6.669667,
+            7.74225,
+            8.541083,
+            7.809958,
+            7.90675,
+            6.841875,
+            7.040541,
+            6.77875
+          ],
+          "warmup_ms": [
+            6.876416,
+            7.49075,
+            7.194875,
+            7.190667,
+            7.000584
+          ],
+          "correctness": {
+            "passed": true,
+            "atol": 3e-05,
+            "rtol": 3e-05,
+            "max_abs_error": 3.115880174708874e-08,
+            "max_relative_error": 0.000545851120297229,
+            "rmse": 8.27887474605878e-09,
+            "reference": "dense_reference_float64"
+          },
+          "setup": {
+            "common_fixture_ms": 19.343084,
+            "variant_materialization_ms": 0.037459
+          },
+          "first_call_ms": 8.41525,
+          "kv_payload_bytes": 12582912,
+          "mask_bytes": 0,
+          "peak_rss_after_setup_bytes": 220626944,
+          "suffix_lengths": [
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128,
+            128
+          ],
+          "prefixfold_version": "0.1.0",
+          "numpy_version": "2.2.6",
+          "torch_version": "2.8.0",
+          "torch_threads": 1,
+          "threadpools": [
+            {
+              "user_api": "openmp",
+              "internal_api": "openmp",
+              "num_threads": 1,
+              "version": null
+            }
+          ],
+          "peak_rss_bytes": 263405568,
+          "worker_exit_code": 0
+        }
+      },
+      "measurement_order": [
+        {
+          "phase": "warmup",
+          "variants": [
+            "torch_sdpa",
+            "prefixfold",
+            "ungrouped",
+            "numpy_dense"
+          ]
+        },
+        {
+          "phase": "warmup",
+          "variants": [
+            "prefixfold",
+            "numpy_dense",
+            "torch_sdpa",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "warmup",
+          "variants": [
+            "ungrouped",
+            "numpy_dense",
+            "torch_sdpa",
+            "prefixfold"
+          ]
+        },
+        {
+          "phase": "warmup",
+          "variants": [
+            "ungrouped",
+            "numpy_dense",
+            "torch_sdpa",
+            "prefixfold"
+          ]
+        },
+        {
+          "phase": "warmup",
+          "variants": [
+            "torch_sdpa",
+            "numpy_dense",
+            "prefixfold",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "torch_sdpa",
+            "ungrouped",
+            "prefixfold",
+            "numpy_dense"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "numpy_dense",
+            "prefixfold",
+            "torch_sdpa",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "prefixfold",
+            "ungrouped",
+            "numpy_dense",
+            "torch_sdpa"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "prefixfold",
+            "ungrouped",
+            "torch_sdpa",
+            "numpy_dense"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "numpy_dense",
+            "torch_sdpa",
+            "prefixfold",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "ungrouped",
+            "prefixfold",
+            "numpy_dense",
+            "torch_sdpa"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "torch_sdpa",
+            "ungrouped",
+            "prefixfold",
+            "numpy_dense"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "numpy_dense",
+            "ungrouped",
+            "torch_sdpa",
+            "prefixfold"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "torch_sdpa",
+            "prefixfold",
+            "ungrouped",
+            "numpy_dense"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "prefixfold",
+            "ungrouped",
+            "torch_sdpa",
+            "numpy_dense"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "torch_sdpa",
+            "numpy_dense",
+            "prefixfold",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "prefixfold",
+            "numpy_dense",
+            "torch_sdpa",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "torch_sdpa",
+            "prefixfold",
+            "numpy_dense",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "numpy_dense",
+            "prefixfold",
+            "ungrouped",
+            "torch_sdpa"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "torch_sdpa",
+            "prefixfold",
+            "ungrouped",
+            "numpy_dense"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "torch_sdpa",
+            "numpy_dense",
+            "prefixfold",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "prefixfold",
+            "numpy_dense",
+            "ungrouped",
+            "torch_sdpa"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "prefixfold",
+            "ungrouped",
+            "numpy_dense",
+            "torch_sdpa"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "numpy_dense",
+            "ungrouped",
+            "prefixfold",
+            "torch_sdpa"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "numpy_dense",
+            "ungrouped",
+            "torch_sdpa",
+            "prefixfold"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "ungrouped",
+            "prefixfold",
+            "numpy_dense",
+            "torch_sdpa"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "ungrouped",
+            "prefixfold",
+            "numpy_dense",
+            "torch_sdpa"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "ungrouped",
+            "torch_sdpa",
+            "numpy_dense",
+            "prefixfold"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "numpy_dense",
+            "ungrouped",
+            "torch_sdpa",
+            "prefixfold"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "torch_sdpa",
+            "numpy_dense",
+            "ungrouped",
+            "prefixfold"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "ungrouped",
+            "numpy_dense",
+            "prefixfold",
+            "torch_sdpa"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "numpy_dense",
+            "torch_sdpa",
+            "prefixfold",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "prefixfold",
+            "torch_sdpa",
+            "numpy_dense",
+            "ungrouped"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "torch_sdpa",
+            "ungrouped",
+            "numpy_dense",
+            "prefixfold"
+          ]
+        },
+        {
+          "phase": "measured",
+          "variants": [
+            "torch_sdpa",
+            "numpy_dense",
+            "ungrouped",
+            "prefixfold"
+          ]
+        }
+      ]
+    }
+  ],
+  "completed_at": "2026-09-21T12:07:43.936449+00:00"
+}

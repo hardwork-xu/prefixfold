@@ -21,7 +21,7 @@ benchmark:
 	$(PY) benchmark.py --config configs/benchmark.json --output results/benchmark.json
 
 analyze:
-	$(PY) scripts/analyze.py --input results/benchmark.json --output-dir results
+	$(PY) scripts/analyze.py --input results/benchmark.json --output-dir results --update-readme
 
 build:
 	$(PY) -m build

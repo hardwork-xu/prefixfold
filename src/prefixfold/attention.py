@@ -25,15 +25,15 @@ class AttentionPlan:
         _positive_int(self.workspace_bytes, "workspace_bytes")
 
     def effective_tile(self, batch_size: int, dim: int) -> int:
-        """Conservative live-array estimate: 4B(3T + 8D + 32) bytes.
+        """Conservative live-array estimate: 4B(4T + 8D + 32) bytes.
 
         用保守显式数组估算裁剪 T；无法容纳一个 token 时拒绝执行。
         """
         b, d = _positive_int(batch_size, "batch_size"), _positive_int(dim, "dim")
         available = self.workspace_bytes // (4 * b) - 8 * d - 32
-        if available < 3:
+        if available < 4:
             raise ValueError("workspace too small for one tile / 临时空间不足以容纳一个分块")
-        return min(self.tile_tokens, available // 3)
+        return min(self.tile_tokens, available // 4)
 
 
 def _update(

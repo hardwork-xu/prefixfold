@@ -1,5 +1,7 @@
 """Numerical oracle and partition invariants / 数值判定与分块不变量。"""
 
+import tracemalloc
+
 import numpy as np
 import pytest
 
@@ -160,3 +162,31 @@ def test_inactive_padding_cannot_overflow_logits(grouped):
         actual = attend(q, batch, grouped=grouped)
         np.testing.assert_allclose(actual[0], 3, atol=3e-5, rtol=3e-5)
         np.testing.assert_allclose(actual[1], 6, atol=3e-5, rtol=3e-5)
+
+
+def test_large_single_row_respects_array_scratch_budget():
+    """Track NumPy temporaries plus Python overhead, not RSS / 跟踪临时分配，不测进程内存。"""
+    tokens, budget = 1024 * 1024, 8 * 1024 * 1024
+    pk = np.empty((1, 0, 1), np.float32)
+    q = np.zeros((1, 1, 1), np.float32)
+    sk = np.zeros((1, 1, tokens, 1), np.float32)
+    sv = np.ones_like(sk)
+    plan = AttentionPlan(tile_tokens=tokens, workspace_bytes=budget)
+    with DecodeBatch(SharedPrefix(pk, pk), 1, tokens) as batch:
+        batch.load_suffix(sk, sv)
+        attend(q, batch, plan)
+        already_tracing = tracemalloc.is_tracing()
+        if not already_tracing:
+            tracemalloc.start()
+        baseline = tracemalloc.get_traced_memory()[0]
+        tracemalloc.reset_peak()
+        try:
+            actual = attend(q, batch, plan)
+            _, peak = tracemalloc.get_traced_memory()
+        finally:
+            if not already_tracing:
+                tracemalloc.stop()
+        # Allow fixed Python/profiler overhead; input/cache allocation precedes tracking.
+        # 为 Python 与跟踪器留固定余量；输入与缓存均在跟踪前分配。
+        assert peak - baseline <= budget + 64 * 1024
+        np.testing.assert_array_equal(actual, 1)

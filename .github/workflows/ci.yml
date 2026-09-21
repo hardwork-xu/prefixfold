@@ -1,4 +1,4 @@
-name: CPU correctness and packaging
+name: CPU correctness and packaging / CPU 正确性与打包
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
